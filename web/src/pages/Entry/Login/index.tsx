@@ -10,12 +10,13 @@ export default function Login() {
           <p>Login</p>
           <form action="" className="loginInputs">
             <input type="email" placeholder="Email" name="" id="" />
-            <input type="password" name="" id="" />
-            <input type="submit" value="" />
+            <input type="password" placeholder="Password" name="" id="" />
+            <input type="submit" value="LOGIN" />
           </form>
-          <a href="#">Não possui cadastro?</a>
-          <a href="#">Esqueci a senha</a>
-          <a href="#">Continuar sem cadastro</a>
+          <div className="loginLinks">
+            <a href="#">Esqueci a senha</a>
+            <a href="#">Não possui cadastro?</a>
+          </div>
         </div>
       </div>
     </div>
