@@ -1,9 +1,13 @@
 import React from 'react';
 
 import { BrowserRouter, Route } from 'react-router-dom';
+
 import Landing from './pages/Landing';
-import ChangePassword from './pages/Login/ChangePassword';
-import Login from './pages/Login/Login';
+import ChangePassword from './pages/Entry/ChangePassword';
+import Login from './pages/Entry/Login';
+import ForgotPassword from './pages/Entry/ForgotPassword';
+import HaveCode from './pages/Entry/HaveCode';
+import Register from './pages/Entry/Register';
 
 function Routes() {
   return (
@@ -11,9 +15,10 @@ function Routes() {
       <Route path="/" exact component={Landing} />
       <Route path="/Entry/Login" exact component={Login} />
       <Route path="/Entry/ChangePassword" exact component={ChangePassword} />
-      <Route path="/Entry/login" exact component={Login} />
-      <Route path="/Entry/login" exact component={Login} />
-      <Route path="/Entry/login" exact component={Login} />
+      <Route path="/Entry/ForgotPassword" exact component={ForgotPassword} />
+      <Route path="/Entry/HaveCode" exact component={HaveCode} />
+      <Route path="/Entry/Register" exact component={Register} />
+      <Route path="/Entry/Register" exact component={Register} />
     </BrowserRouter>
   );
 }

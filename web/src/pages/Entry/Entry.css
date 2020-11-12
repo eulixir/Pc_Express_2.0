@@ -1,0 +1,11 @@
+.entryContainer {
+  width: 35vw;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(189, 189, 189);
+  border-radius: 15px;
+  border: 4px solid white;
+}

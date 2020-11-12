@@ -1,0 +1,22 @@
+.loginBackground {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(228, 228, 228);
+}
+
+.loginBackground p {
+  font: 700 1.6rem Roboto;
+}
+
+.loginInputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginInputs input {
+  width: 200px;
+  margin-bottom: 10px;
+}
