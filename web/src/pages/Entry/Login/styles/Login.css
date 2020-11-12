@@ -4,13 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(2, 0, 36);
+  background-image: url(../../../../assets/wall-login.jpg);
+  background-size: cover;
+  /* background: rgb(2, 0, 36);
   background: linear-gradient(
     180deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(9, 9, 121, 1) 35%,
     rgba(0, 212, 255, 1) 100%
-  );
+  ); */
 }
 
 .loginBackground p {
@@ -23,12 +25,13 @@
 .loginInputs {
   display: flex;
   flex-direction: column;
+  padding-top: 200px;
 }
 
 .loginInputs input[type='password'],
 .loginInputs input[type='email'] {
   width: 80vw;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   border-bottom: 2px solid white;
   background-color: rgba(0, 0, 0, 0);
   border-top: none;
@@ -38,12 +41,26 @@
   font: 700 1rem Roboto;
   color: white;
   padding-left: 20px;
+  transition: 0.8s;
+}
+
+.loginInputs input[type='password']:focus,
+.loginInputs input[type='email']:focus {
+  border: 2px solid rgb(182, 182, 182);
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 .loginInputs input[type='password']::placeholder,
 .loginInputs input[type='email']::placeholder {
   color: white;
-  opacity: 1;
+  transition: 0.8s;
+}
+
+.loginInputs input[type='password']:focus::placeholder,
+.loginInputs input[type='email']:focus::placeholder {
+  opacity: 40%;
 }
 
 .loginInputs input[type='submit'] {
@@ -55,30 +72,66 @@
   outline: none;
   color: white;
   cursor: pointer;
-  font: 700 1.2rem Roboto;
+  font: 700 1rem Roboto;
+  transition: 0.8s;
+}
+
+.loginInputs input[type='submit']:hover {
+  background-color: white;
+  color: black;
 }
 
 .loginLinks {
   color: white;
   height: 20vh;
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 30px;
-  border-radius: 0px 0px 18px 18px;
-  background-color: rgba(235, 235, 235, 0.432);
+  flex-direction: row;
   margin-top: 20px;
   width: 90vw;
-  border: 4px solid white;
   border-top: none;
   display: flex;
   align-items: center;
+  padding-top: 100px;
   justify-content: space-around;
 }
 
-.entryContainer a {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-  font: 400 0.8rem Roboto;
+.loginLinks a {
+  margin-top: 10px;
+}
+
+.loginLinks a:hover {
+  opacity: 70%;
+}
+
+@media (min-width: 600px) {
+  .loginLinks {
+    width: 80vw;
+  }
+  .loginInputs input[type='password'],
+  .loginInputs input[type='email'],
+  .loginInputs input[type='submit'] {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 700px) {
+  .loginLinks {
+    width: 60vw;
+  }
+  .loginInputs input[type='password'],
+  .loginInputs input[type='email'],
+  .loginInputs input[type='submit'] {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  .loginLinks {
+    width: 40vw;
+  }
+  .loginInputs input[type='password'],
+  .loginInputs input[type='email'],
+  .loginInputs input[type='submit'] {
+    width: 40vw;
+  }
 }
