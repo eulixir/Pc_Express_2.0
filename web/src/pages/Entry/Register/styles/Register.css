@@ -26,18 +26,6 @@
   flex-direction: column;
   padding-top: 200px;
 }
-.showPassword {
-  margin-right: 20px;
-  position: absolute;
-  padding-bottom: 10px;
-  right: 10px;
-  margin-bottom: 100px;
-  cursor: pointer;
-  transition: 0.8s;
-}
-.showPassword:hover {
-  opacity: 70%;
-}
 
 .passwordContainer {
   position: relative;
@@ -46,7 +34,8 @@
 .registerInputs input[type='email'],
 .registerInputs input[type='text'] {
   width: 80vw;
-  margin-bottom: 80px;
+  height: 45px;
+  margin-bottom: 50px;
   border-bottom: 2px solid white;
   background-color: rgba(0, 0, 0, 0);
   border-top: none;
@@ -83,7 +72,7 @@
 
 .registerInputs input[type='submit'] {
   width: 80vw;
-  height: 40px;
+  height: 60px;
   border-radius: 18px;
   border: 2px solid white;
   background-color: rgba(255, 255, 255, 0);
