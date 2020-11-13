@@ -27,7 +27,7 @@ export default function Login() {
             <input type="submit" value="LOGIN" />
           </form>
           <div className="loginLinks">
-            <Link to="/Entry/ChangePassword">Forgot Your Password?</Link>
+            <Link to="/Entry/ForgotPassword">Forgot Your Password?</Link>
             <Link to="/Entry/Register">Don't Have Register?</Link>
           </div>
         </div>

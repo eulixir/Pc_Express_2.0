@@ -4,15 +4,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../../../../assets/wall-login.jpg);
-  background-size: cover;
-  /* background: rgb(2, 0, 36);
+
+  background: rgb(2, 0, 36);
   background: linear-gradient(
     180deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(9, 9, 121, 1) 35%,
     rgba(0, 212, 255, 1) 100%
-  ); */
+  );
 }
 
 .registerBackground p {
@@ -139,7 +138,8 @@
   }
   .registerInputs input[type='password'],
   .registerInputs input[type='email'],
-  .registerInputs input[type='submit'] {
+  .registerInputs input[type='submit'],
+  .registerInputs input[type='text'] {
     width: 40vw;
   }
 }
@@ -150,7 +150,8 @@
   }
   .registerInputs input[type='password'],
   .registerInputs input[type='email'],
-  .registerInputs input[type='submit'] {
+  .registerInputs input[type='submit'],
+  .registerInputs input[type='text'] {
     width: 40vw;
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/Register.css';
-import { BsEyeSlash } from 'react-icons/bs';
+
 import { BsArrowLeft } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ export default function Register() {
       <div className="registerBackground">
         <div className="entryContainer">
           <div className="GoBackEntryIcon">
-            <Link to="/">
+            <Link to="/Entry/Login">
               <BsArrowLeft color="white" size={50} />
             </Link>
           </div>
