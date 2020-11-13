@@ -1,9 +1,9 @@
 const express = require('express');
-const transactionRouter = express.Router();
-const service = require('../services/transactionService');
+const userRouter = express.Router();
+const service = require('../services/transaction');
 
-module.exports = transactionRouter;
-transactionRouter.get('/', async (request, response) => {
+module.exports = userRouter;
+userRouter.get('/', async (request, response) => {
   const { query } = request;
 
   try {
@@ -18,11 +18,11 @@ transactionRouter.get('/', async (request, response) => {
       throw new Error(`Período inválido. Use o formato yyyy-mm`);
     }
 
-    const filteredTransactions = await service.getTransactionsFrom(period);
+    const filteredUsers = await service.getUserFrom(period);
 
     response.send({
-      lenght: filteredTransactions.length,
-      transactions: filteredTransactions,
+      lenght: filteredUsers.length,
+      users: filteredUsers,
     });
   } catch ({ message }) {
     console.log(message);
@@ -30,7 +30,7 @@ transactionRouter.get('/', async (request, response) => {
   }
 });
 
-transactionRouter.post('/', async (request, response) => {
+userRouter.post('/', async (request, response) => {
   const { body } = request;
 
   try {
@@ -38,27 +38,19 @@ transactionRouter.post('/', async (request, response) => {
       throw new Error(`Conteúdo inexistente`);
     }
 
-    const { description, value, category, year, month, day, type } = body;
-    const yearMonth = `${year}-${month.toString().padStart(2, '0')}`;
-    const yearMonthDay = `${yearMonth}-${day.toString().padStart(2, '0')}`;
+    const { name, email, password } = body;
 
-    const postTransaction = {
-      description,
-      value,
-      category,
-      year,
-      month,
-      day,
-      yearMonth,
-      yearMonthDay,
-      type,
+    const postUser = {
+      name,
+      email,
+      password,
     };
 
-    const newTransaction = await service.postTransaction(postTransaction);
+    const newUser = await service.postUser(postUser);
 
     response.send({
       status: 'Ok',
-      transaction: newTransaction,
+      user: newUser,
     });
   } catch ({ message }) {
     console.log(message);
@@ -66,7 +58,7 @@ transactionRouter.post('/', async (request, response) => {
   }
 });
 
-transactionRouter.put('/', async (request, response) => {
+userRouter.put('/', async (request, response) => {
   try {
     throw new Error(`Id inexistente`);
   } catch ({ message }) {
@@ -75,7 +67,7 @@ transactionRouter.put('/', async (request, response) => {
   }
 });
 
-transactionRouter.put('/:id', async (request, response) => {
+userRouter.put('/:id', async (request, response) => {
   const { body, params } = request;
 
   console.log(params);
@@ -84,31 +76,20 @@ transactionRouter.put('/:id', async (request, response) => {
     if (JSON.stringify(body) == '{}') {
       throw new Error(`Conteúdo inexistente`);
     }
-    const { description, value, category, year, month, day, type } = body;
+    const { name, email, password } = body;
     const { id } = params;
-    const yearMonth = `${year}-${month.toString().padStart(2, '0')}`;
-    const yearMonthDay = `${yearMonth}-${day.toString().padStart(2, '0')}`;
 
     const updateTransaction = {
-      description,
-      value,
-      category,
-      year,
-      month,
-      day,
-      yearMonth,
-      yearMonthDay,
-      type,
+      name,
+      email,
+      password,
     };
 
-    const updatedTransaction = await service.updateTransaction(
-      id,
-      updateTransaction
-    );
+    const updatedUser = await service.updateUser(id, updateTransaction);
 
     response.send({
       status: 'Ok',
-      transaction: updatedTransaction,
+      transaction: updatedUser,
     });
   } catch ({ message }) {
     console.log(message);
@@ -116,7 +97,7 @@ transactionRouter.put('/:id', async (request, response) => {
   }
 });
 
-transactionRouter.delete('/:id', async (request, response) => {
+userRouter.delete('/:id', async (request, response) => {
   const { params } = request;
 
   console.log(params);
@@ -124,7 +105,7 @@ transactionRouter.delete('/:id', async (request, response) => {
   try {
     const { id } = params;
 
-    const didDelete = await service.deleteTransaction(id);
+    const didDelete = await service.deleteUser(id);
 
     if (didDelete) {
       response.send({

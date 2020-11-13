@@ -6,6 +6,6 @@ let schema = mongoose.Schema({
   password: String,
 });
 
-const TransactionModel = mongoose.model('transaction', schema);
+const TransactionModel = mongoose.model('user', schema);
 
 module.exports = TransactionModel;
