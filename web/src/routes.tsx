@@ -18,7 +18,6 @@ function Routes() {
       <Route path="/Entry/ForgotPassword" exact component={ForgotPassword} />
       <Route path="/Entry/HaveCode" exact component={HaveCode} />
       <Route path="/Entry/Register" exact component={Register} />
-      <Route path="/Entry/Register" exact component={Register} />
     </BrowserRouter>
   );
 }

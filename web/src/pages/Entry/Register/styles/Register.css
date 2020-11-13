@@ -1,0 +1,156 @@
+.registerBackground {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../../../../assets/wall-login.jpg);
+  background-size: cover;
+  /* background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  ); */
+}
+
+.registerBackground p {
+  font: 700 2rem Roboto;
+  position: absolute;
+  top: 100px;
+  color: white;
+}
+
+.registerInputs {
+  display: flex;
+  flex-direction: column;
+  padding-top: 200px;
+}
+.showPassword {
+  margin-right: 20px;
+  position: absolute;
+  padding-bottom: 10px;
+  right: 10px;
+  margin-bottom: 100px;
+  cursor: pointer;
+  transition: 0.8s;
+}
+.showPassword:hover {
+  opacity: 70%;
+}
+
+.passwordContainer {
+  position: relative;
+}
+.registerInputs input[type='password'],
+.registerInputs input[type='email'],
+.registerInputs input[type='text'] {
+  width: 80vw;
+  margin-bottom: 80px;
+  border-bottom: 2px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  font: 700 1rem Roboto;
+  color: white;
+  padding-left: 20px;
+  transition: 0.8s;
+}
+
+.registerInputs input[type='password']:focus,
+.registerInputs input[type='email']:focus,
+.registerInputs input[type='text']:focus {
+  border: 2px solid rgb(182, 182, 182);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.registerInputs input[type='password']::placeholder,
+.registerInputs input[type='email']::placeholder,
+.registerInputs input[type='text']::placeholder {
+  color: white;
+  transition: 0.8s;
+}
+
+.registerInputs input[type='password']:focus::placeholder,
+.registerInputs input[type='email']:focus::placeholder,
+.registerInputs input[type='text']:focus::placeholder {
+  opacity: 40%;
+}
+
+.registerInputs input[type='submit'] {
+  width: 80vw;
+  height: 40px;
+  border-radius: 18px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0);
+  outline: none;
+  color: white;
+  cursor: pointer;
+  font: 700 1rem Roboto;
+  transition: 0.8s;
+}
+
+.registerInputs input[type='submit']:hover {
+  background-color: white;
+  color: black;
+}
+
+.registerLinks {
+  color: white;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  width: 90vw;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  justify-content: space-around;
+}
+
+.registerLinks a {
+  margin-top: 10px;
+}
+
+.registerLinks a:hover {
+  opacity: 70%;
+}
+
+@media (min-width: 600px) {
+  .registerLinks {
+    width: 80vw;
+  }
+  .registerInputs input[type='password'],
+  .registerInputs input[type='email'],
+  .registerInputs input[type='submit'] {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 700px) {
+  .registerLinks {
+    width: 60vw;
+  }
+  .registerInputs input[type='password'],
+  .registerInputs input[type='email'],
+  .registerInputs input[type='submit'] {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  .registerLinks {
+    width: 40vw;
+  }
+  .registerInputs input[type='password'],
+  .registerInputs input[type='email'],
+  .registerInputs input[type='submit'] {
+    width: 40vw;
+  }
+}
