@@ -5,10 +5,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon",
-    "test": "jest"
+    "db": "node populateDb.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.14",
     "uuidv4": "^6.2.4"

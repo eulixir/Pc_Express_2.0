@@ -4,7 +4,7 @@ const fs = require('fs').promises;
 const dotenv = require('dotenv');
 dotenv.config();
 
-const TRANSACTIONS_COLLECTION = 'transactions';
+const USER_COLLECTION = 'User';
 
 /**
  * Crie um arquivo .env na raiz da pasta 'utils' e
@@ -52,9 +52,9 @@ async function recreateCollections() {
 }
 
 async function dropCollections() {
-  const promiseTransactions = new Promise((resolve, reject) => {
+  const promiseUser = new Promise((resolve, reject) => {
     connection.db
-      .dropCollection(TRANSACTIONS_COLLECTION)
+      .dropCollection(USER_COLLECTION)
       .then(() => {
         resolve();
       })
@@ -68,13 +68,13 @@ async function dropCollections() {
       });
   });
 
-  await Promise.all([promiseTransactions]);
+  await Promise.all([promiseUser]);
 }
 
 async function createCollections() {
-  const promiseTransactions = new Promise((resolve, reject) => {
+  const promiseUser = new Promise((resolve, reject) => {
     connection.db
-      .createCollection(TRANSACTIONS_COLLECTION)
+      .createCollection(USER_COLLECTION)
       .then(() => {
         resolve();
       })
@@ -83,21 +83,21 @@ async function createCollections() {
       });
   });
 
-  await Promise.all([promiseTransactions]);
+  await Promise.all([promiseUser]);
 }
 
 async function populateCollections() {
-  const promiseTransactions = new Promise(async (resolve, reject) => {
-    const stringArrayTransactions = await fs.readFile(
+  const promiseUser = new Promise(async (resolve, reject) => {
+    const stringArrayUser = await fs.readFile(
       './populate/populate.json',
       'utf-8'
     );
 
-    const transactions = JSON.parse(stringArrayTransactions);
+    const User = JSON.parse(stringArrayUser);
 
     connection.db
-      .collection(TRANSACTIONS_COLLECTION)
-      .insertMany(transactions)
+      .collection(USER_COLLECTION)
+      .insertMany(User)
       .then(() => {
         resolve();
       })
@@ -106,5 +106,5 @@ async function populateCollections() {
       });
   });
 
-  await Promise.all([promiseTransactions]);
+  await Promise.all([promiseUser]);
 }
