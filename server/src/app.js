@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
-const Nhaa = [];
+const User = [];
 app.use(cors());
 app.use(express.json());
 
@@ -21,12 +21,12 @@ app.use('/Entry/:email', validateEmail);
 
 app.get('/Entry/Login', (request, response) => {
   const { email } = request.query;
-  const data = email ? Nhaa.filter((Nhaa) => Nhaa.email.includes(email)) : Nhaa;
+  const user = email ? User.filter((User) => User.email.includes(email)) : User;
 
   console.log('----------------------------------------------------------');
-  console.log(data);
+  console.log(user);
   console.log('----------------------------------------------------------');
-  return response.json(data);
+  return response.json(user);
 });
 
 app.post('/Entry/Register', (request, response) => {
@@ -34,11 +34,37 @@ app.post('/Entry/Register', (request, response) => {
 
   const register = { name, email, password };
 
-  Nhaa.push(register);
+  User.push(register);
   console.log('----------------------------------------------------------');
   console.log(register);
   console.log('----------------------------------------------------------');
   return response.json(register);
+});
+
+app.get('/Entry/Validate/:email', (request, response) => {
+  const { email } = request.params;
+  const { name, password } = request.body;
+
+  const user = { name, email, password };
+
+  const findUserIndex = User.findIndex((user) => user.email === email);
+
+  if (findUserIndex === -1) {
+    return response.status(400).json({ error: 'Email does not exist' });
+  }
+
+  const emailValidate = {
+    name,
+    email: User[findUserIndex].email,
+    password,
+  };
+
+  user[findUserIndex] = emailValidate;
+
+  console.log('----------------------------------------------------------');
+  console.log(emailValidate);
+  console.log('----------------------------------------------------------');
+  return response.json(email);
 });
 
 console.log('----------------------------------------------------------');
