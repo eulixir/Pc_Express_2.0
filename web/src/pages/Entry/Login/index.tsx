@@ -9,7 +9,7 @@ const emailData = document.querySelector('#email');
 const passwordData = document.querySelector('#Login');
 
 function inputData() {
-  console.log(loginData);
+  // console.log(loginData);
 }
 
 export default function Login() {

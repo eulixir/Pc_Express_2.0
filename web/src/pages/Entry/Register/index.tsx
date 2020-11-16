@@ -1,10 +1,43 @@
-import React from 'react';
+import React, { useState, FormEvent } from 'react';
 import './styles/Register.css';
 
 import { BsArrowLeft } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import api from '../../../services/api';
+import { useHistory } from 'react-router-dom';
 
-export default function Register() {
+function Register() {
+  const history = useHistory();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [repeatPassword, setRepeatPassword] = useState('');
+
+  function handleCreateRegister(e: FormEvent) {
+    e.preventDefault();
+
+    if (password === repeatPassword) {
+      api
+        .post('Entry/Register', {
+          name,
+          email,
+          password,
+          repeatPassword,
+        })
+
+        .then(() => {
+          alert('cadastro realizado com sucesso');
+
+          history.push('/Entry/Login');
+        })
+        .catch(() => {
+          ('Erro no cadastro!');
+        });
+    } else {
+      alert('As senhas não coincidem');
+    }
+  }
+
   return (
     <div className="background">
       <div className="registerBackground">
@@ -16,25 +49,42 @@ export default function Register() {
           </div>
 
           <p>Register</p>
-          <form action="" className="registerInputs">
-            <input type="text" placeholder="Name" name="" id="" />
+          <form onSubmit={handleCreateRegister} className="registerInputs">
+            <input
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => [setName(e.target.value)]}
+            />
 
-            <input type="email" placeholder="Email" name="" id="" />
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => [setEmail(e.target.value)]}
+            />
 
-            <input type="password" placeholder="Password" name="" id="" />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => [setPassword(e.target.value)]}
+            />
 
             <input
               type="password"
               placeholder="Repeat your Password"
-              name=""
-              id=""
+              value={repeatPassword}
+              onChange={(e) => [setRepeatPassword(e.target.value)]}
             />
-            <Link to="/Entry/Login">
-              <input type="submit" value="REGISTER" />
-            </Link>
+            {/* <Link to=""> */}
+            <input type="submit" value="REGISTER" />
+            {/* </Link> */}
           </form>
         </div>
       </div>
     </div>
   );
 }
+
+export default Register;
