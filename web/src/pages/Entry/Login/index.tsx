@@ -20,8 +20,8 @@ function Login() {
       .then(() => {
         history.push('/');
       })
-      .catch(() => {
-        console.log('Erro no cadastro!');
+      .catch((err) => {
+        window.alert('Invalid email or password');
       });
   }
 
@@ -42,12 +42,14 @@ function Login() {
               placeholder="Email"
               value={email}
               onChange={(e) => [setEmail(e.target.value)]}
+              required
             />
             <div className="passwordContainer">
               <input
                 type="password"
                 placeholder="Password"
                 onChange={(e) => [setPassword(e.target.value)]}
+                required
               />
               <BsEyeSlash size={32} color="white" className="showPassword" />
             </div>

@@ -55,6 +55,7 @@ function Register() {
               placeholder="Name"
               value={name}
               onChange={(e) => [setName(e.target.value)]}
+              required
             />
 
             <input
@@ -62,6 +63,7 @@ function Register() {
               placeholder="Email"
               value={email}
               onChange={(e) => [setEmail(e.target.value)]}
+              required
             />
 
             <input
@@ -69,6 +71,7 @@ function Register() {
               placeholder="Password"
               value={password}
               onChange={(e) => [setPassword(e.target.value)]}
+              required
             />
 
             <input
@@ -76,6 +79,7 @@ function Register() {
               placeholder="Repeat your Password"
               value={repeatPassword}
               onChange={(e) => [setRepeatPassword(e.target.value)]}
+              required
             />
 
             <input type="submit" value="REGISTER" />
