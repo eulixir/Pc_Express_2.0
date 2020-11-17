@@ -44,7 +44,7 @@
   width: 80vw;
   height: 45px;
   margin-bottom: 80px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid rgb(182, 182, 182);
   background-color: rgba(0, 0, 0, 0);
   border-top: none;
   border-left: none;
@@ -58,7 +58,7 @@
 
 .loginInputs input[type='password']:focus,
 .loginInputs input[type='email']:focus {
-  border: 2px solid rgb(182, 182, 182);
+  border: 2px solid white;
   border-top: none;
   border-left: none;
   border-right: none;

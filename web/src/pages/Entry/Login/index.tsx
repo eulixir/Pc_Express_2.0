@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { useState, FormEvent } from 'react';
 import './styles/Login.css';
 import '../Entry.css';
 import { BsEyeSlash } from 'react-icons/bs';
 import { BsArrowLeft } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import api from '../../../services/api';
+import { useHistory } from 'react-router-dom';
 
-const emailData = document.querySelector('#email');
-const passwordData = document.querySelector('#Login');
+function Login() {
+  const history = useHistory();
 
-function inputData() {
-  // console.log(loginData);
-}
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-export default function Login() {
+  function handleLogin(e: FormEvent) {
+    e.preventDefault();
+
+    api.get('Entry/Validate/').then((response) => handleLogin(response.data));
+    console.log(email);
+  }
+
+  function senha() {
+    window.alert(password);
+  }
+
   return (
     <div className="background">
       <div className="loginBackground">
@@ -24,18 +35,23 @@ export default function Login() {
           </div>
 
           <p>Login</p>
-          <form action="" className="loginInputs">
-            <input type="email" placeholder="Email" name="" id="email" />
+          <form onSubmit={handleLogin} className="loginInputs">
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => [setEmail(e.target.value)]}
+            />
             <div className="passwordContainer">
               <input
                 type="password"
                 placeholder="Password"
-                name=""
-                id="password"
+                onChange={(e) => [setPassword(e.target.value)]}
+                onClick={senha}
               />
               <BsEyeSlash size={32} color="white" className="showPassword" />
             </div>
-            <input type="submit" value="LOGIN" onClick={inputData} />
+            <input type="submit" value="LOGIN" />
           </form>
           <div className="loginLinks">
             <Link to="/Entry/ForgotPassword">Forgot Your Password?</Link>
@@ -46,3 +62,5 @@ export default function Login() {
     </div>
   );
 }
+
+export default Login;

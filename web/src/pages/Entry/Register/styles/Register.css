@@ -36,7 +36,7 @@
   width: 80vw;
   height: 45px;
   margin-bottom: 50px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid rgb(182, 182, 182);
   background-color: rgba(0, 0, 0, 0);
   border-top: none;
   border-left: none;
@@ -51,7 +51,7 @@
 .registerInputs input[type='password']:focus,
 .registerInputs input[type='email']:focus,
 .registerInputs input[type='text']:focus {
-  border: 2px solid rgb(182, 182, 182);
+  border: 2px solid white;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -86,28 +86,6 @@
 .registerInputs input[type='submit']:hover {
   background-color: white;
   color: black;
-}
-
-.registerLinks {
-  color: white;
-  height: 20vh;
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
-  width: 90vw;
-  border-top: none;
-  display: flex;
-  align-items: center;
-  padding-top: 100px;
-  justify-content: space-around;
-}
-
-.registerLinks a {
-  margin-top: 10px;
-}
-
-.registerLinks a:hover {
-  opacity: 70%;
 }
 
 @media (min-width: 600px) {
