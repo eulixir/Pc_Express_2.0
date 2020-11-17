@@ -15,20 +15,14 @@ function Login() {
   function handleLogin(e: FormEvent) {
     e.preventDefault();
 
-    if (email) {
-      api
-        .get('Entry/Validate/' + email, {})
-
-        .then(() => {
-          alert('cadastro realizado com sucesso');
-          history.push('/');
-        });
-        .catch(() => {
-          ('Erro no cadastro!');
-        });
-    } else {
-      alert('Email ou senha incorreta');
-    }
+    api
+      .get('Entry/Validate/' + email, {})
+      .then(() => {
+        history.push('/');
+      })
+      .catch(() => {
+        console.log('Erro no cadastro!');
+      });
   }
 
   return (
