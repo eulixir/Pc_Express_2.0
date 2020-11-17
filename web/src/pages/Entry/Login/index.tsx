@@ -9,19 +9,26 @@ import { useHistory } from 'react-router-dom';
 
 function Login() {
   const history = useHistory();
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   function handleLogin(e: FormEvent) {
     e.preventDefault();
 
-    api.get('Entry/Validate/').then((response) => handleLogin(response.data));
-    console.log(email);
-  }
+    if (email) {
+      api
+        .get('Entry/Validate/' + email, {})
 
-  function senha() {
-    window.alert(password);
+        .then(() => {
+          alert('cadastro realizado com sucesso');
+          history.push('/');
+        });
+        .catch(() => {
+          ('Erro no cadastro!');
+        });
+    } else {
+      alert('Email ou senha incorreta');
+    }
   }
 
   return (
@@ -47,7 +54,6 @@ function Login() {
                 type="password"
                 placeholder="Password"
                 onChange={(e) => [setPassword(e.target.value)]}
-                onClick={senha}
               />
               <BsEyeSlash size={32} color="white" className="showPassword" />
             </div>

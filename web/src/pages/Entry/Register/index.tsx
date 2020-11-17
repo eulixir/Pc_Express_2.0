@@ -77,9 +77,8 @@ function Register() {
               value={repeatPassword}
               onChange={(e) => [setRepeatPassword(e.target.value)]}
             />
-            {/* <Link to=""> */}
+
             <input type="submit" value="REGISTER" />
-            {/* </Link> */}
           </form>
         </div>
       </div>
