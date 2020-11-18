@@ -42,32 +42,42 @@ app.post('/Entry/Register', (request, response) => {
 });
 
 app.get('/Entry/Validate/:email/:password', (request, response) => {
-  const { email } = request.params;
-  const { name, password } = request.body;
+  const { email, name, password } = request.params;
+
+  console.log(email);
+  console.log(password);
 
   const user = { name, email, password };
 
   const findUserIndex = User.findIndex((user) => user.email === email);
+  const findPasswordIndex = User.findIndex(
+    (user) => user.password === password
+  );
+
+  console.log(findPasswordIndex);
 
   if (findUserIndex === -1) {
-    return response.status(400).json({ error: 'Email does not exist' });
+    return response.status(400).json({ error: 'Email invalid' });
   }
-  console.log(password);
+
+  if (findPasswordIndex === -1) {
+    return response.status(400).json({ error: 'Password invalid' });
+  }
 
   const emailValidate = {
     name: User[findUserIndex].name,
     email: User[findUserIndex].email,
     password: User[findUserIndex].password,
   };
+  console.log(password);
+  console.log(name);
 
   user[findUserIndex] = emailValidate;
 
   console.log('----------------------------------------------------------');
   console.log(emailValidate);
-  console.log(password);
-
   console.log('----------------------------------------------------------');
-  return response.json(emailValidate);
+  return response.json(email);
 });
 
 console.log('----------------------------------------------------------');
