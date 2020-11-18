@@ -41,11 +41,9 @@ app.post('/Entry/Register', (request, response) => {
   return response.json(register);
 });
 
+// Validate Email and Password
 app.get('/Entry/Validate/:email/:password', (request, response) => {
   const { email, name, password } = request.params;
-
-  console.log(email);
-  console.log(password);
 
   const user = { name, email, password };
 
@@ -73,6 +71,37 @@ app.get('/Entry/Validate/:email/:password', (request, response) => {
   console.log('----------------------------------------------------------');
   console.log(emailValidate);
   console.log('----------------------------------------------------------');
+  return response.json(emailValidate);
+});
+
+app.get('/Entry/sendEmail/:email/', (request, response) => {
+  const { email } = request.params;
+
+  const user = { email };
+
+  const findUserIndex = User.findIndex((user) => user.email === email);
+
+  if (findUserIndex === -1) {
+    return response.status(400).json({ error: 'Email invalid' });
+  }
+
+  const emailValidate = {
+    email: User[findUserIndex].email,
+  };
+  user[findUserIndex] = emailValidate;
+
+  function getRandomCode(length) {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  }
+  const randomCode = getRandomCode(5);
+  console.log(randomCode);
+
   return response.json(emailValidate);
 });
 
