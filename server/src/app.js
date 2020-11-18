@@ -59,7 +59,6 @@ app.get('/Entry/Validate/:email/:password', (request, response) => {
   if (findUserIndex === -1) {
     return response.status(400).json({ error: 'Email invalid' });
   }
-
   if (findPasswordIndex === -1) {
     return response.status(400).json({ error: 'Password invalid' });
   }
@@ -69,15 +68,12 @@ app.get('/Entry/Validate/:email/:password', (request, response) => {
     email: User[findUserIndex].email,
     password: User[findUserIndex].password,
   };
-  console.log(password);
-  console.log(name);
-
   user[findUserIndex] = emailValidate;
 
   console.log('----------------------------------------------------------');
   console.log(emailValidate);
   console.log('----------------------------------------------------------');
-  return response.json(email);
+  return response.json(emailValidate);
 });
 
 console.log('----------------------------------------------------------');
