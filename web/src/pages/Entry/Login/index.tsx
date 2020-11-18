@@ -16,7 +16,7 @@ function Login() {
     e.preventDefault();
 
     api
-      .get('Entry/Validate/' + email, {})
+      .get('Entry/Validate/' + email + '/' + password, {})
       .then(() => {
         history.push('/');
       })

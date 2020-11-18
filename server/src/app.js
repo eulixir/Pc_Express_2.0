@@ -41,7 +41,7 @@ app.post('/Entry/Register', (request, response) => {
   return response.json(register);
 });
 
-app.get('/Entry/Validate/:email', (request, response) => {
+app.get('/Entry/Validate/:email/:password', (request, response) => {
   const { email } = request.params;
   const { name, password } = request.body;
 
@@ -52,19 +52,22 @@ app.get('/Entry/Validate/:email', (request, response) => {
   if (findUserIndex === -1) {
     return response.status(400).json({ error: 'Email does not exist' });
   }
+  console.log(password);
 
   const emailValidate = {
-    name,
+    name: User[findUserIndex].name,
     email: User[findUserIndex].email,
-    password,
+    password: User[findUserIndex].password,
   };
 
   user[findUserIndex] = emailValidate;
 
   console.log('----------------------------------------------------------');
   console.log(emailValidate);
+  console.log(password);
+
   console.log('----------------------------------------------------------');
-  return response.json(email);
+  return response.json(emailValidate);
 });
 
 console.log('----------------------------------------------------------');
