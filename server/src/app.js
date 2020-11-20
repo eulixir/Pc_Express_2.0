@@ -103,7 +103,6 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
   }
 
   const randomCode = getRandomCode(5);
-  console.log(randomCode);
 
   let transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -113,19 +112,18 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
     },
   });
 
-  // Step 2
   let mailOptions = {
     from: 'noreply.pcexpress@gmail.com',
     to: email,
-    text: 'Wooohooo it works!!' + randomCode,
+    subject: 'Reset your password',
+    text: 'Your reset code is = ' + randomCode,
   };
 
-  // Step 3
   transporter.sendMail(mailOptions, (err, data) => {
     if (err) {
-      return log('Error occurs');
+      console.log(err + 'send email fail');
     }
-    return log('Email sent!!!');
+    console.log('Email send 🚀');
   });
 
   return response.json(emailValidate);
