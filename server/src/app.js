@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 const User = [];
 app.use(cors());
@@ -104,29 +105,29 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
   const randomCode = getRandomCode(5);
   console.log(randomCode);
 
-  const emailNoReply = process.env.LOGIN;
-  const passwordNoReply = process.env.SENHA;
-
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    auth: { emailNoReply, passwordNoReply },
+  let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
+    },
   });
 
-  transporter
-    .sendMail({
-      from: emailNoReply,
-      to: emailNoReply,
-      replyTo: 'jotalmeida007@hotmail.com',
-      subject: 'Recuperação de senha',
-      text: 'olá!!!',
-    })
-    .then((info) => {
-      response.send(info);
-    })
-    .catch((error) => {
-      response.send(error);
-    });
+  // Step 2
+  let mailOptions = {
+    from: 'noreply.pcexpress@gmail.com',
+    to: email,
+    text: 'Wooohooo it works!!' + randomCode,
+  };
+
+  // Step 3
+  transporter.sendMail(mailOptions, (err, data) => {
+    if (err) {
+      return log('Error occurs');
+    }
+    return log('Email sent!!!');
+  });
+
   return response.json(emailValidate);
 });
 
