@@ -101,18 +101,32 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
     return code;
   }
 
-  const emailNoReply = 'random@email';
-  const passwordNoReply = 'password';
-
-  const transporter = nodemailer.createTransport({
-    host: teste,
-    port: teste,
-    auth: { emailNoReply, passwordNoReply },
-  });
-
   const randomCode = getRandomCode(5);
   console.log(randomCode);
 
+  const emailNoReply = process.env.LOGIN;
+  const passwordNoReply = process.env.SENHA;
+
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    auth: { emailNoReply, passwordNoReply },
+  });
+
+  transporter
+    .sendMail({
+      from: emailNoReply,
+      to: emailNoReply,
+      replyTo: 'jotalmeida007@hotmail.com',
+      subject: 'Recuperação de senha',
+      text: 'olá!!!',
+    })
+    .then((info) => {
+      response.send(info);
+    })
+    .catch((error) => {
+      response.send(error);
+    });
   return response.json(emailValidate);
 });
 
