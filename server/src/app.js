@@ -92,14 +92,24 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
   user[findUserIndex] = emailValidate;
 
   function getRandomCode(length) {
-    var result = '';
+    var code = '';
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
     var charactersLength = characters.length;
     for (var i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      code += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
-    return result;
+    return code;
   }
+
+  const emailNoReply = 'random@email';
+  const passwordNoReply = 'password';
+
+  const transporter = nodemailer.createTransport({
+    host: teste,
+    port: teste,
+    auth: { emailNoReply, passwordNoReply },
+  });
+
   const randomCode = getRandomCode(5);
   console.log(randomCode);
 
