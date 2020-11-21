@@ -43,7 +43,7 @@
 .loginInputs input[type='email'] {
   width: 80vw;
   height: 45px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   border-bottom: 2px solid rgb(182, 182, 182);
   background-color: rgba(0, 0, 0, 0);
   border-top: none;
