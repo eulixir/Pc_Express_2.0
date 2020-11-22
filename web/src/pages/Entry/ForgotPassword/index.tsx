@@ -17,7 +17,7 @@ export default function ForgotPassword() {
       .get('Entry/sendEmail/' + email, {})
       .then(() => {
         window.alert('A verification code has been sent to your email');
-        // history.push('/');
+        history.push('/');
       })
       .catch((err) => {
         window.alert('Invalid email');
