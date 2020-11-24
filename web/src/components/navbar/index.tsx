@@ -5,6 +5,16 @@ import { RiUserFill } from 'react-icons/ri';
 import { ImCart } from 'react-icons/im';
 import './styles/navbar.css';
 
+// var instance = M.Carousel.init({
+//   fullWidth: true,
+// });
+
+// // Or with jQuery
+
+// $('.carousel.carousel-slider').carousel({
+//   fullWidth: true,
+// });
+
 const Navbar = () => {
   return (
     <div>
