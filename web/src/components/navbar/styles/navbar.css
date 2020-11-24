@@ -1,0 +1,19 @@
+.navbarContainer {
+  background-color: #000;
+  width: 100vw;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.landingLogo p {
+  background-color: #fff;
+  width: 150px;
+}
+
+/* @media (min-width: 1200px) {
+  .landingLogo p {
+    padding-left: 400px;
+  }
+} */

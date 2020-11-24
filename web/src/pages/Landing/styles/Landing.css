@@ -1,5 +1,7 @@
 .landingBackground {
-  background-color: rgb(10, 75, 160);
+  background-image: url(../../../assets/wallpeaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
 }
