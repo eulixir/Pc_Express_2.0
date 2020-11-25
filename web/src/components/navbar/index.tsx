@@ -37,16 +37,29 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                About Us
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span>About</span>
               </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
+              <div
+                className="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a className="dropdown-item" id="navItedmPcGamer" href="#">
+                  About Us
+                </a>
+                <a className="dropdown-item" id="navItemWdorkstation" href="#">
+                  About Devs
+                </a>
+              </div>
             </li>
             <li className="nav-item dropdown">
               <a
@@ -75,9 +88,16 @@ const Navbar = () => {
                 </a>
               </div>
             </li>
-            <li className="nav-item"></li>
-            <li className="nav-item"></li>
-            <li className="nav-item marketcarLanding"></li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <span>Contact</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <span>FAQ</span>
+              </a>
+            </li>
           </ul>
           <div className="searchLogo">
             <input type="text" name="" id=""></input>

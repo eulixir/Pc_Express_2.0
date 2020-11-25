@@ -87,6 +87,19 @@
   background-color: rgb(18, 117, 230);
 }
 
+.nav-item span {
+  color: white;
+  margin-left: 40px;
+  transition: 0.1s;
+}
+.nav-item span:hover {
+  border: 2px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: rgb(226, 226, 226);
+}
+
 .navbar {
   font: 700 1rem Roboto;
 }
