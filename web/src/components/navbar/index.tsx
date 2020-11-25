@@ -23,11 +23,7 @@ const Navbar = () => {
         <a className="navbar-brand" href="#">
           Pc Express
         </a>
-        <a className="nav-link" href="#">
-          <div className="searchLogo">
-            <BsSearch size={25} color={'#fff'} />
-          </div>
-        </a>
+        <a className="nav-link" href="#"></a>
 
         <button
           className="navbar-toggler"
@@ -42,16 +38,12 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
-              </a>
-            </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Features
+                About Us
               </a>
             </li>
+
             <li className="nav-item">
               <a className="nav-link" href="#">
                 Pricing
@@ -88,6 +80,10 @@ const Navbar = () => {
             <li className="nav-item"></li>
             <li className="nav-item marketcarLanding"></li>
           </ul>
+          <div className="searchLogo">
+            <input type="text" name="" id=""></input>
+            <BsSearch size={25} color={'#294CCA'} />
+          </div>
         </div>
       </nav>
     </div>

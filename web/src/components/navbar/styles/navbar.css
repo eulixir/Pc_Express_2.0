@@ -20,7 +20,7 @@
 }
 
 .bg {
-  background-color: rgba(11, 6, 68, 0);
+  background-color: rgba(0, 0, 0, 0.692);
 }
 .landingCar {
   position: absolute;
@@ -30,4 +30,30 @@
 .landingUser {
   position: absolute;
   right: 150px;
+}
+
+.searchLogo {
+  margin-left: 100px;
+  width: 240px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 18px;
+  background-color: white;
+  font: 700 0.8rem 'JetBrains Mono';
+}
+
+.searchLogo {
+  padding-left: 10px;
+}
+
+.searchLogo input {
+  outline: none;
+  border: none;
+}
+
+@media (max-width: 991px) {
+  .searchLogo {
+    margin-left: 0;
+  }
 }
