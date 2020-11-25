@@ -8,7 +8,6 @@ const Navbar = () => {
   return (
     <div>
       <div className="navbarContainer">
-        <div className="landingMenu"></div>
         <div className="landingLogo">
           <p>Pc Express</p>
         </div>
@@ -59,20 +58,20 @@ const Navbar = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Dropdown link
+                <span>Computers</span>
               </a>
               <div
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a className="dropdown-item" href="#">
-                  Action
+                <a className="dropdown-item" id="navItemPcGamer" href="#">
+                  Pc Gamer
                 </a>
-                <a className="dropdown-item" href="#">
-                  Another action
+                <a className="dropdown-item" id="navItemWorkstation" href="#">
+                  WorkStation
                 </a>
-                <a className="dropdown-item" href="#">
-                  Something else here
+                <a className="dropdown-item" id="navItemHome" href="#">
+                  Home
                 </a>
               </div>
             </li>

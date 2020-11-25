@@ -1,0 +1,13 @@
+.landingSliderContainer {
+  width: 100%;
+  height: 18vh;
+  margin-top: 40px;
+  display: flex;
+
+  justify-content: center;
+}
+
+.landingSlider {
+  width: 80vw;
+  height: 18vh;
+}
