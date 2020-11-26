@@ -8,15 +8,18 @@ import HelpToAssembly from '../../components/helpToAssembly/index';
 
 export default function Landing() {
   return (
-    <div>
-      <div className="landingBackground">
-        <SuportIcon />
-        <div className="backgroundSmooth">
-          <div className="landingHeader">
-            <Navbar />
+    <div className="landingBackground">
+      <SuportIcon />
+      <div className="backgroundSmooth">
+        <div className="landingHeader">
+          <Navbar />
+          <div className="scrollBody">
+            <div className="scrollContainer">
+              <Slider />
+              <Slider />
+              <HelpToAssembly />
+            </div>
           </div>
-          <Slider />
-          <HelpToAssembly />
         </div>
       </div>
     </div>
