@@ -4,7 +4,6 @@ import './styles/Landing.css';
 
 import Slider from '../../components/slider';
 import SuportIcon from '../../components/suportIcon';
-import HelpToAssembly from '../../components/helpToAssembly/index';
 
 export default function Landing() {
   return (
@@ -20,6 +19,10 @@ export default function Landing() {
               <HelpToAssembly />
             </div>
           </div>
+<<<<<<< HEAD
+=======
+          <Slider />
+>>>>>>> parent of 59d4349... Add helpassembly component
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
+<<<<<<< HEAD
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,4 +25,6 @@
   display: flex;
   justify-content: center;
   margin-top: 80px;
+=======
+>>>>>>> parent of 59d4349... Add helpassembly component
 }
