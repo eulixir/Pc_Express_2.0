@@ -1,5 +1,33 @@
 .helpToAssemblyContainer {
   width: 100vw;
-  height: 200px;
-  background-color: rgb(37, 138, 104);
+  height: 100px;
+  background-color: rgb(53, 53, 53);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+}
+
+.helpToAssemblyText {
+  height: 80%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  border: 2px solid white;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+}
+
+.helpToAssemblyText span {
+  width: 80%;
+  font: 700 1.2rem 'JetBrains Mono';
+  height: 100%;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

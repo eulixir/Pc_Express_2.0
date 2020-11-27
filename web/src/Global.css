@@ -17,3 +17,22 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.884);
 }
+
+body {
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  border: 2px solid blue;
+  display: flex;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(30, 78, 167);
+  width: 20px;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+}

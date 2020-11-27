@@ -8,15 +8,15 @@ import HelpToAssembly from '../../components/helpToAssembly';
 
 export default function Landing() {
   return (
-    <div className="landingBackground">
+    <div className="landingBackground area" ss-container>
       <SuportIcon />
       <div className="backgroundSmooth">
         <div className="landingHeader">
           <Navbar />
           <div className="sliderBackground">
             <Slider />
+            <HelpToAssembly />
           </div>
-          <HelpToAssembly />
         </div>
       </div>
     </div>
