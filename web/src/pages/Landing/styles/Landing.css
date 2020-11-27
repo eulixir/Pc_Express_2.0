@@ -4,27 +4,7 @@
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
-<<<<<<< HEAD
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.scrollContainer {
-  width: 70vw;
-  display: flex;
-  justify-content: center;
-  height: 80vh;
-  flex-direction: column;
-  overflow: scroll;
-  background-color: rgb(38, 38, 95);
-}
-
-.scrollBody {
-  width: 100vw;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  margin-top: 80px;
-=======
->>>>>>> parent of 59d4349... Add helpassembly component
 }

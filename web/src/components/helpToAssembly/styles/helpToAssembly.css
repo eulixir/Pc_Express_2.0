@@ -1,5 +1,5 @@
-.helpAssemblyContainer {
-  /* width: 100vw; */
-  height: 20px;
-  background-color: aquamarine;
+.helpToAssemblyContainer {
+  width: 100vw;
+  height: 200px;
+  background-color: rgb(37, 138, 104);
 }

@@ -4,6 +4,7 @@ import './styles/Landing.css';
 
 import Slider from '../../components/slider';
 import SuportIcon from '../../components/suportIcon';
+import HelpToAssembly from '../../components/helpToAssembly';
 
 export default function Landing() {
   return (
@@ -12,17 +13,10 @@ export default function Landing() {
       <div className="backgroundSmooth">
         <div className="landingHeader">
           <Navbar />
-          <div className="scrollBody">
-            <div className="scrollContainer">
-              <Slider />
-              <Slider />
-              <HelpToAssembly />
-            </div>
+          <div className="sliderBackground">
+            <Slider />
           </div>
-<<<<<<< HEAD
-=======
-          <Slider />
->>>>>>> parent of 59d4349... Add helpassembly component
+          <HelpToAssembly />
         </div>
       </div>
     </div>
