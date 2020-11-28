@@ -8,7 +8,7 @@ import HelpToAssembly from '../../components/helpToAssembly';
 
 export default function Landing() {
   return (
-    <div className="landingBackground area" ss-container>
+    <div className="landingBackground area">
       <SuportIcon />
       <div className="backgroundSmooth">
         <div className="landingHeader">

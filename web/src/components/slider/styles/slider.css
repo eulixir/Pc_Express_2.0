@@ -1,43 +1,12 @@
 .landingSliderContainer {
   width: 100%;
-  height: 82vh;
   margin-top: 40px;
   display: flex;
+  margin-top: 20px;
   justify-content: center;
   background-color: rgba(250, 235, 215, 0);
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 .landingSlider {
-  width: 80vw;
-  height: 18vh;
-  height: 21vh;
-}
-@media (max-width: 1200px) {
-  .landingSliderContainer {
-    height: 72vh;
-  }
-}
-@media (max-width: 900px) {
-  .landingSliderContainer {
-    height: 60vh;
-  }
-}
-
-@media (max-width: 750px) {
-  .landingSliderContainer {
-    height: 50vh;
-  }
-}
-@media (max-width: 600px) {
-  .landingSliderContainer {
-    height: 30vh;
-  }
-}
-
-@media (max-width: 420px) {
-  .landingSliderContainer {
-    height: 25vh;
-  }
+  width: 80%;
 }
