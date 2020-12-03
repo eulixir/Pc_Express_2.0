@@ -4,6 +4,7 @@ import { BsSearch } from 'react-icons/bs';
 import { RiUserFill } from 'react-icons/ri';
 import { ImCart } from 'react-icons/im';
 import './styles/navbar.css';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <div>
@@ -12,7 +13,9 @@ const Navbar = () => {
           <p>Pc Express</p>
         </div>
         <div className="landingUser">
-          <RiUserFill size={25} color={'#294CCA'} />
+          <Link to="Entry/Login">
+            <RiUserFill size={25} color={'#294CCA'} />
+          </Link>
         </div>
         <div className="landingCar">
           <ImCart size={25} color={'#fff'} />
@@ -53,9 +56,13 @@ const Navbar = () => {
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a className="dropdown-item" id="navItedmPcGamer" href="#">
+                <Link
+                  to="/aboutUs"
+                  className="dropdown-item"
+                  id="navItedmPcGamer"
+                >
                   About Us
-                </a>
+                </Link>
                 <a className="dropdown-item" id="navItemWdorkstation" href="#">
                   About Devs
                 </a>
