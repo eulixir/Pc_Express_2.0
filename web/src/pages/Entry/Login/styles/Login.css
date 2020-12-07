@@ -39,6 +39,7 @@
   position: relative;
 }
 .loginInputs input[type='password'],
+.loginInputs input[type='text'],
 .loginInputs input[type='email'] {
   width: 80vw;
   height: 45px;
@@ -56,6 +57,7 @@
 }
 
 .loginInputs input[type='password']:focus,
+.loginInputs input[type='text']:focus,
 .loginInputs input[type='email']:focus {
   border: 2px solid white;
   border-top: none;
@@ -64,13 +66,15 @@
 }
 
 .loginInputs input[type='password']::placeholder,
-.loginInputs input[type='email']::placeholder {
+.loginInputs input[type='email']::placeholder,
+.loginInputs input[type='text']::placeholder {
   color: white;
   transition: 0.8s;
 }
 
 .loginInputs input[type='password']:focus::placeholder,
-.loginInputs input[type='email']:focus::placeholder {
+.loginInputs input[type='email']:focus::placeholder,
+.loginInputs input[type='text']::focus::placeholder {
   opacity: 40%;
 }
 
@@ -121,6 +125,7 @@
   }
   .loginInputs input[type='password'],
   .loginInputs input[type='email'],
+  .loginInputs input[type='text'],
   .loginInputs input[type='submit'] {
     width: 60vw;
   }
@@ -132,6 +137,7 @@
   }
   .loginInputs input[type='password'],
   .loginInputs input[type='email'],
+  .loginInputs input[type='text'],
   .loginInputs input[type='submit'] {
     width: 40vw;
   }
@@ -143,6 +149,7 @@
   }
   .loginInputs input[type='password'],
   .loginInputs input[type='email'],
+  .loginInputs input[type='text'],
   .loginInputs input[type='submit'] {
     width: 40vw;
   }

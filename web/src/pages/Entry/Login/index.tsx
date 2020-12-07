@@ -11,6 +11,11 @@ function Login() {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [passwordShown, setPasswordShown] = useState(false);
+
+  const togglePasswordVisiblity = () => {
+    setPasswordShown(passwordShown ? false : true);
+  };
 
   function handleLogin(e: FormEvent) {
     e.preventDefault();
@@ -46,12 +51,17 @@ function Login() {
             />
             <div className="passwordContainer">
               <input
-                type="password"
+                type={passwordShown ? 'text' : 'password'}
                 placeholder="Password"
                 onChange={(e) => [setPassword(e.target.value)]}
                 required
               />
-              <BsEyeSlash size={32} color="white" className="showPassword" />
+              <BsEyeSlash
+                onClick={togglePasswordVisiblity}
+                size={32}
+                color="white"
+                className="showPassword"
+              />
             </div>
             <input type="submit" value="LOGIN" />
           </form>
