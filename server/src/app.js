@@ -116,23 +116,9 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
     from: 'noreply.pcexpress@gmail.com',
     to: email,
     subject: 'Reset your password',
-    text: 'Your reset code is = ' + randomCode,
     html:
-      '<p>For clients that do not support AMP4EMAIL or amp content is not valid</p>',
-    amp: `<!doctype html>
-    <html ⚡4email>
-      <head>
-        <meta charset="utf-8">
-        <style amp4email-boilerplate>body{visibility:hidden}</style>
-        <script async src="https://cdn.ampproject.org/v0.js"></script>
-        <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
-      </head>
-      <body>
-        <p>Image: <amp-img src="https://cldup.com/P0b1bUmEet.png" width="16" height="16"/></p>
-        <p>GIF (requires "amp-anim" script in header):<br/>
-          <amp-anim src="https://cldup.com/D72zpdwI-i.gif" width="500" height="350"/></p>
-      </body>
-    </html>`,
+      '<p>We heard that you lost your PcExpress password. Sorry about that!</p><p>But don’t worry! You can use the following code to reset your password</p>' +
+      randomCode,
   };
 
   transporter.sendMail(mailOptions, (err, data) => {
