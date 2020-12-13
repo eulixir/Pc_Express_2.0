@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const nodemailer = require('nodemailer');
-const service = require('../services/TransactionService');
+const service = require('../db/userServices');
 
 require('dotenv').config();
 
@@ -33,16 +33,22 @@ app.get('/Entry/Login', (request, response) => {
   return response.json(user);
 });
 
-app.post('/Entry/Register', (request, response) => {
+app.post('/Entry/Register', async (request, response) => {
   const { name, email, password } = request.body;
 
-  const register = { name, email, password };
+  try {
+    const register = { name, email, password };
 
-  User.push(register);
-  console.log('----------------------------------------------------------');
-  console.log(register);
-  console.log('----------------------------------------------------------');
-  return response.json(register);
+    const newUser = await service.postUser(register);
+
+    response.send({
+      status: 'Ok',
+      transaction: newUser,
+    });
+  } catch ({ message }) {
+    console.log(message);
+    response.status(400).send({ error: message });
+  }
 });
 
 // Validate Email and Password
