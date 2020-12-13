@@ -3,8 +3,11 @@ const cors = require('cors');
 const app = express();
 const nodemailer = require('nodemailer');
 const service = require('../db/userServices');
+const crypto = require('crypto');
 
 require('dotenv').config();
+
+const secret = process.env.SECRETCRYPTO;
 
 const User = [];
 app.use(cors());
@@ -34,7 +37,23 @@ app.get('/Entry/Login', (request, response) => {
 });
 
 app.post('/Entry/Register', async (request, response) => {
-  const { name, email, password } = request.body;
+  let { name, email, password } = request.body;
+  console.log(password);
+
+  const encrypt = (value) => {
+    const iv = Buffer.from(crypto.randomBytes(16));
+    const cipher = crypto.createCipheriv(
+      'aes-256-cbc',
+      Buffer.from(secret),
+      iv
+    );
+    let encrypted = cipher.update(value);
+    encrypted = Buffer.concat([encrypted, cipher.final()]);
+    return `${iv.toString('hex')}:${encrypted.toString('hex')}`;
+  };
+
+  const cryptoPassword = encrypt(password);
+  password = cryptoPassword;
 
   try {
     const register = { name, email, password };
