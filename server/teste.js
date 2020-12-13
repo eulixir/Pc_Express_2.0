@@ -22,3 +22,27 @@ mongoose
   });
 
 // Model
+
+const UserSchema = mongoose.Schema({
+  email: String,
+  name: String,
+  password: String,
+});
+
+// Collection
+mongoose.model('User', UserSchema);
+
+const User = mongoose.model('User');
+
+new User({
+  email: 'String',
+  name: 'String',
+  password: 'String',
+})
+  .save()
+  .then(() => {
+    console.log('User registred');
+  })
+  .catch((err) => {
+    console.log('Register faliluer ' + err);
+  });
