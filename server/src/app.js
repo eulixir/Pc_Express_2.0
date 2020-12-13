@@ -26,19 +26,30 @@ function validateEmail(request, response, next) {
 
 app.use('/Entry/:email', validateEmail);
 
-app.get('/Entry/Login', (request, response) => {
+// get User
+app.get('/Entry/Login', async (request, response) => {
   const { email } = request.query;
   const user = email ? User.filter((User) => User.email.includes(email)) : User;
 
+  try {
+    const getUsers = await service.getUser(email);
+
+    response.send({
+      users: getUsers,
+    });
+  } catch ({ message }) {
+    console.log(message);
+    response.status(400).send({ error: message });
+  }
   console.log('----------------------------------------------------------');
   console.log(user);
   console.log('----------------------------------------------------------');
   return response.json(user);
 });
 
+// Post User
 app.post('/Entry/Register', async (request, response) => {
   let { name, email, password } = request.body;
-  console.log(password);
 
   const encrypt = (value) => {
     const iv = Buffer.from(crypto.randomBytes(16));
@@ -57,7 +68,6 @@ app.post('/Entry/Register', async (request, response) => {
 
   try {
     const register = { name, email, password };
-
     const newUser = await service.postUser(register);
 
     response.send({
@@ -73,6 +83,7 @@ app.post('/Entry/Register', async (request, response) => {
 // Validate Email and Password
 app.get('/Entry/Validate/:email/:password', (request, response) => {
   const { email, name, password } = request.params;
+  console.log(password);
 
   const user = { name, email, password };
 
@@ -103,6 +114,7 @@ app.get('/Entry/Validate/:email/:password', (request, response) => {
   return response.json(emailValidate);
 });
 
+// Send Random Code
 app.get('/Entry/sendEmail/:email/', (request, response) => {
   const { email } = request.params;
 
