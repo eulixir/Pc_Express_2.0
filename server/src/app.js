@@ -4,6 +4,10 @@ const app = express();
 const nodemailer = require('nodemailer');
 const service = require('../db/userServices');
 const crypto = require('crypto');
+const emailExistence = require('email-existence');
+var validator = require('validator');
+
+const takeRandomCode = require('../functions/randomCode');
 
 require('dotenv').config();
 
@@ -46,34 +50,11 @@ app.get('/Entry/Login', async (request, response) => {
 // Post User
 app.post('/Entry/Register', async (request, response) => {
   let { name, email, password } = request.body;
-  const encrypt = (value) => {
-    const iv = Buffer.from(crypto.randomBytes(16));
-    const cipher = crypto.createCipheriv(
-      'aes-256-cbc',
-      Buffer.from(secret),
-      iv
-    );
-    console.log(password);
-    let encrypted = cipher.update(value);
-    encrypted = Buffer.concat([encrypted, cipher.final()]);
-    return `${iv.toString('hex')}:${encrypted.toString('hex')}`;
-  };
 
-  const cryptoPassword = encrypt(password);
-  password = cryptoPassword;
-
-  try {
-    const register = { name, email, password };
-    const newUser = await service.postUser(register);
-
-    response.send({
-      status: 'Ok',
-      transaction: newUser,
-    });
-  } catch ({ message }) {
-    console.log(message);
-    response.status(400).send({ error: message });
-  }
+  emailExistence.check(email, function (error, response) {
+    console.log('res: ' + response);
+    console.log('Email does not valid');
+  });
 });
 
 // Validate Email and Password
@@ -133,6 +114,10 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
 
   const user = { email };
 
+  console.log(takeRandomCode);
+
+  // console.log(RandomCode);
+
   const findUserIndex = User.findIndex((user) => user.email === email);
 
   if (findUserIndex === -1) {
@@ -143,18 +128,6 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
     email: User[findUserIndex].email,
   };
   user[findUserIndex] = emailValidate;
-
-  function getRandomCode(length) {
-    var code = '';
-    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    var charactersLength = characters.length;
-    for (var i = 0; i < length; i++) {
-      code += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return code;
-  }
-
-  const randomCode = getRandomCode(5);
 
   let transporter = nodemailer.createTransport({
     service: 'gmail',
