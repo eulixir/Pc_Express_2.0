@@ -41,30 +41,26 @@ app.get('/Entry/Login', async (request, response) => {
     console.log(message);
     response.status(400).send({ error: message });
   }
-  console.log('----------------------------------------------------------');
-  console.log(user);
-  console.log('----------------------------------------------------------');
-  return response.json(user);
 });
 
 // Post User
 app.post('/Entry/Register', async (request, response) => {
   let { name, email, password } = request.body;
 
-  const encrypt = (value) => {
-    const iv = Buffer.from(crypto.randomBytes(16));
-    const cipher = crypto.createCipheriv(
-      'aes-256-cbc',
-      Buffer.from(secret),
-      iv
-    );
-    let encrypted = cipher.update(value);
-    encrypted = Buffer.concat([encrypted, cipher.final()]);
-    return `${iv.toString('hex')}:${encrypted.toString('hex')}`;
-  };
+  // const encrypt = (value) => {
+  //   const iv = Buffer.from(crypto.randomBytes(16));
+  //   const cipher = crypto.createCipheriv(
+  //     'aes-256-cbc',
+  //     Buffer.from(secret),
+  //     iv
+  //   );
+  //   let encrypted = cipher.update(value);
+  //   encrypted = Buffer.concat([encrypted, cipher.final()]);
+  //   return `${iv.toString('hex')}:${encrypted.toString('hex')}`;
+  // };
 
-  const cryptoPassword = encrypt(password);
-  password = cryptoPassword;
+  // const cryptoPassword = encrypt(password);
+  // password = cryptoPassword;
 
   try {
     const register = { name, email, password };
@@ -81,18 +77,40 @@ app.post('/Entry/Register', async (request, response) => {
 });
 
 // Validate Email and Password
-app.get('/Entry/Validate/:email/:password', (request, response) => {
-  const { email, name, password } = request.params;
-  console.log(password);
-
+app.get('/Entry/Validate/:email/:password', async (request, response) => {
+  let { email, name, password } = request.params;
   const user = { name, email, password };
+
+  // const encrypt = (value) => {
+  //   const iv = Buffer.from(crypto.randomBytes(16));
+  //   const cipher = crypto.createCipheriv(
+  //     'aes-256-cbc',
+  //     Buffer.from(secret),
+  //     iv
+  //   );
+  //   let encrypted = cipher.update(value);
+  //   encrypted = Buffer.concat([encrypted, cipher.final()]);
+  //   return `${iv.toString('hex')}:${encrypted.toString('hex')}`;
+  // };
+
+  // const cryptoPassword = encrypt(password);
+  // password = cryptoPassword;
+
+  try {
+    const getUsers = await service.getUser(email);
+    console.log(email);
+    response.send({
+      users: getUsers,
+    });
+  } catch ({ message }) {
+    console.log(message);
+    response.status(400).send({ error: message });
+  }
 
   const findUserIndex = User.findIndex((user) => user.email === email);
   const findPasswordIndex = User.findIndex(
     (user) => user.password === password
   );
-
-  console.log(findPasswordIndex);
 
   if (findUserIndex === -1) {
     return response.status(400).json({ error: 'Email invalid' });
@@ -107,11 +125,6 @@ app.get('/Entry/Validate/:email/:password', (request, response) => {
     password: User[findUserIndex].password,
   };
   user[findUserIndex] = emailValidate;
-
-  console.log('----------------------------------------------------------');
-  console.log(emailValidate);
-  console.log('----------------------------------------------------------');
-  return response.json(emailValidate);
 });
 
 // Send Random Code
