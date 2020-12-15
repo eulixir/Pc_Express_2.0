@@ -50,7 +50,6 @@ app.get('/Entry/Login', async (request, response) => {
 // Post User
 app.post('/Entry/Register', async (request, response) => {
   let { name, email, password } = request.body;
-
   const encrypt = (value) => {
     const iv = Buffer.from(crypto.randomBytes(16));
     const cipher = crypto.createCipheriv(
@@ -58,6 +57,7 @@ app.post('/Entry/Register', async (request, response) => {
       Buffer.from(secret),
       iv
     );
+    console.log(password);
     let encrypted = cipher.update(value);
     encrypted = Buffer.concat([encrypted, cipher.final()]);
     return `${iv.toString('hex')}:${encrypted.toString('hex')}`;
@@ -171,7 +171,7 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
 });
 
 console.log('----------------------------------------------------------');
-console.log('|                   Backend Started ✔                    |');
+console.log('|                   Backend Starting                     |');
 console.log('----------------------------------------------------------');
 
 module.exports = app;
