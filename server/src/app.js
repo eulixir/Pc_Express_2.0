@@ -50,32 +50,35 @@ app.get('/Entry/Login', async (request, response) => {
 // Post User
 app.post('/Entry/Register', async (request, response) => {
   let { name, email, password } = request.body;
+  // Try if email is valid
+  try {
+    // Try to insert in mongoDB
+    try {
+      const register = { name, email, password };
+      const newUser = await service.postUser(register);
 
-  emailExistence.check(email, function (error, response) {
-    console.log('res: ' + response);
-    console.log('Email does not valid');
-  });
+      response.send({
+        status: 'Ok',
+        transaction: newUser,
+      });
+    } catch ({ message }) {
+      console.log(message);
+      response.status(400).send({ error: message });
+    }
+    emailExistence.check(
+      'jotalmeida007@hotmail.com',
+      function (error, response) {
+        console.log('res: ' + response);
+        console.log('Email does not valid');
+      }
+    );
+  } catch (err) {}
 });
 
 // Validate Email and Password
 app.get('/Entry/Validate/:email/:password', async (request, response) => {
   let { email, name, password } = request.params;
   const user = { name, email, password };
-
-  // const encrypt = (value) => {
-  //   const iv = Buffer.from(crypto.randomBytes(16));
-  //   const cipher = crypto.createCipheriv(
-  //     'aes-256-cbc',
-  //     Buffer.from(secret),
-  //     iv
-  //   );
-  //   let encrypted = cipher.update(value);
-  //   encrypted = Buffer.concat([encrypted, cipher.final()]);
-  //   return `${iv.toString('hex')}:${encrypted.toString('hex')}`;
-  // };
-
-  // const cryptoPassword = encrypt(password);
-  // password = cryptoPassword;
 
   try {
     const getUsers = await service.getUser(email);
@@ -114,10 +117,6 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
 
   const user = { email };
 
-  console.log(takeRandomCode);
-
-  // console.log(RandomCode);
-
   const findUserIndex = User.findIndex((user) => user.email === email);
 
   if (findUserIndex === -1) {
@@ -143,7 +142,7 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
     subject: 'Reset your password',
     html:
       '<p>We heard that you lost your PcExpress password. Sorry about that!</p><p>But don’t worry! You can use the following code to reset your password</p>' +
-      randomCode,
+      takeRandomCode,
   };
 
   transporter.sendMail(mailOptions, (err, data) => {
