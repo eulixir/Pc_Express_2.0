@@ -22,13 +22,13 @@ body {
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-  border: 2px solid blue;
+  border: 2px solid #294cca;
   display: flex;
   width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(30, 78, 167);
+  background: #294cca;
   width: 20px;
   border-radius: 20px;
 }
