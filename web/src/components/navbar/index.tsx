@@ -56,14 +56,10 @@ const Navbar = () => {
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <Link
-                  to="/aboutUs"
-                  className="dropdown-item"
-                  id="navItedmPcGamer"
-                >
+                <Link to="/aboutUs" className="dropdown-item" id="navItem">
                   About Us
                 </Link>
-                <a className="dropdown-item" id="navItemWdorkstation" href="#">
+                <a className="dropdown-item" id="navItem" href="#">
                   About Devs
                 </a>
               </div>
@@ -84,13 +80,13 @@ const Navbar = () => {
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a className="dropdown-item" id="navItemPcGamer" href="#">
+                <a className="dropdown-item" id="navItem" href="#">
                   Pc Gamer
                 </a>
-                <a className="dropdown-item" id="navItemWorkstation" href="#">
+                <a className="dropdown-item" id="navItem" href="#">
                   WorkStation
                 </a>
-                <a className="dropdown-item" id="navItemHome" href="#">
+                <a className="dropdown-item" id="navItem" href="#">
                   Home
                 </a>
               </div>

@@ -54,37 +54,14 @@
   border: none;
 }
 
-#navItemPcGamer {
+#navItem {
   font: 700 1rem 'JetBrains Mono';
-  color: red;
-  transition: 0.6s;
+  color: rgb(99, 99, 99);
 }
 
-#navItemPcGamer:hover {
-  color: rgb(255, 255, 255);
-  background-color: red;
-}
-
-#navItemWorkstation {
-  font: 700 1rem Roboto;
-  color: rgb(97, 39, 5);
-  transition: 0.6s;
-}
-
-#navItemWorkstation:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(97, 39, 5);
-}
-
-#navItemHome {
-  font: 700 1rem Roboto;
-  color: rgb(18, 117, 230);
-  transition: 0.6s;
-}
-
-#navItemHome:hover {
-  color: white;
-  background-color: rgb(18, 117, 230);
+#navItem:hover {
+  border-bottom: 2px solid rgb(0, 0, 0);
+  color: #000;
 }
 
 .nav-item span {
