@@ -50,6 +50,9 @@
   text-align: right;
 }
 .site-footer .social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -119,14 +122,21 @@
   width: 34px;
   font-size: 14px;
 }
-.social-icons a.facebook:hover {
-  background-color: #3b5998;
-}
-.social-icons a.twitter:hover {
-  background-color: #00aced;
-}
 .social-icons a.linkedin:hover {
-  background-color: #007bb6;
+  background-color: #0441c4;
+}
+.social-icons a.github:hover {
+  background-color: #181818;
+}
+.social-icons a.instagram:hover {
+  background: rgb(161, 34, 195);
+  background: linear-gradient(
+    214deg,
+    rgba(161, 34, 195, 1) 0%,
+    rgba(181, 34, 168, 1) 39%,
+    rgba(195, 34, 151, 1) 50%,
+    rgba(253, 188, 45, 1) 100%
+  );
 }
 .social-icons a.dribbble:hover {
   background-color: #ea4c89;

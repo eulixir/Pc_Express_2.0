@@ -1,6 +1,9 @@
 import React from 'react';
 import './styles/footer.css';
 import { Link } from 'react-router-dom';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { FiGithub } from 'react-icons/fi';
+import { RiInstagramLine } from 'react-icons/ri';
 
 const currentYear = new Date().getFullYear();
 
@@ -77,23 +80,24 @@ export default function Footer() {
           <div className="col-md-4 col-sm-6 col-xs-12">
             <ul className="social-icons">
               <li>
-                <a className="facebook" href="#">
-                  <i className="fa fa-facebook"></i>
+                <a
+                  className="linkedin"
+                  href="https://www.linkedin.com/in/jo%C3%A3o-pedro-alves-910858163/"
+                >
+                  <FaLinkedinIn size={20} color={'#fff'} />
                 </a>
               </li>
               <li>
-                <a className="twitter" href="#">
-                  <i className="fa fa-twitter"></i>
+                <a
+                  className="github"
+                  href="https://github.com/joaopealves/Pc_Express_2.0"
+                >
+                  <FiGithub size={20} color={'#fff'} />
                 </a>
               </li>
               <li>
-                <a className="dribbble" href="#">
-                  <i className="fa fa-dribbble"></i>
-                </a>
-              </li>
-              <li>
-                <a className="linkedin" href="#">
-                  <i className="fa fa-linkedin"></i>
+                <a className="instagram" href="#">
+                  <RiInstagramLine size={20} color={'#fff'}></RiInstagramLine>
                 </a>
               </li>
             </ul>
