@@ -2,6 +2,7 @@ import React from 'react';
 import './styles/aboutUs.css';
 import Navbar from '../../components/navbar/index';
 import { Link } from 'react-router-dom';
+import Footer from '../../components/footer';
 
 export default function aboutUs() {
   return (
@@ -24,6 +25,7 @@ export default function aboutUs() {
           </div>
         </div>
         <div className="abousUsContainer">Learn more</div>
+        <Footer />
       </div>
     </div>
   );
