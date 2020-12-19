@@ -22,9 +22,9 @@ const Navbar = () => {
         </div>
       </div>
       <nav className="navbar navbar-expand-lg navbar-dark bg">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           Pc Express
-        </a>
+        </Link>
         <a className="nav-link" href="#"></a>
 
         <button

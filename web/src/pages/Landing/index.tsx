@@ -5,6 +5,7 @@ import './styles/Landing.css';
 import Slider from '../../components/slider';
 import SuportIcon from '../../components/suportIcon';
 import HelpToAssembly from '../../components/helpToAssembly';
+import Footer from '../../components/footer';
 
 export default function Landing() {
   return (
@@ -16,6 +17,7 @@ export default function Landing() {
           <div className="sliderBackground">
             <Slider />
             <HelpToAssembly />
+            <Footer />
           </div>
         </div>
       </div>
