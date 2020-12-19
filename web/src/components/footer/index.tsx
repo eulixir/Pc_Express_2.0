@@ -2,6 +2,8 @@ import React from 'react';
 import './styles/footer.css';
 import { Link } from 'react-router-dom';
 
+const currentYear = new Date().getFullYear();
+
 export default function Footer() {
   return (
     <div className="site-footer">
@@ -48,18 +50,16 @@ export default function Footer() {
                 <Link to="/aboutUs">About Us</Link>
               </li>
               <li>
-                <a href="/contacUS">Contact Us</a>
+                <Link to="/contacUS">Contact Us</Link>
               </li>
               <li>
-                <a href="/aboutDevs">About Devs</a>
+                <Link to="/aboutDevs">About Devs</Link>
               </li>
               <li>
-                <a href="http://scanfcode.com/privacy-policy/">
-                  Privacy Policy
-                </a>
+                <a href="#">Build your pc</a>
               </li>
               <li>
-                <a href="http://scanfcode.com/sitemap/">Sitemap</a>
+                <a href="#">Partners</a>
               </li>
             </ul>
           </div>
@@ -69,7 +69,7 @@ export default function Footer() {
         <div className="row">
           <div className="col-md-8 col-sm-6 col-xs-12">
             <p className="copyright-text">
-              Copyright &copy; 2020 All Rights Reserved by
+              Copyright &copy; {currentYear} All Rights Reserved by
               <a href="#"> PcExpress</a>.
             </p>
           </div>
