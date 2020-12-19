@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Pc_Express_2.0/static/css/main.a5ee0eda.chunk.css",
+    "main.js": "/Pc_Express_2.0/static/js/main.d8182803.chunk.js",
+    "main.js.map": "/Pc_Express_2.0/static/js/main.d8182803.chunk.js.map",
+    "runtime-main.js": "/Pc_Express_2.0/static/js/runtime-main.b327b221.js",
+    "runtime-main.js.map": "/Pc_Express_2.0/static/js/runtime-main.b327b221.js.map",
+    "static/js/2.224cd3ad.chunk.js": "/Pc_Express_2.0/static/js/2.224cd3ad.chunk.js",
+    "static/js/2.224cd3ad.chunk.js.map": "/Pc_Express_2.0/static/js/2.224cd3ad.chunk.js.map",
+    "index.html": "/Pc_Express_2.0/index.html",
+    "static/css/main.a5ee0eda.chunk.css.map": "/Pc_Express_2.0/static/css/main.a5ee0eda.chunk.css.map",
+    "static/js/2.224cd3ad.chunk.js.LICENSE.txt": "/Pc_Express_2.0/static/js/2.224cd3ad.chunk.js.LICENSE.txt",
+    "static/media/Gamer.9f6a8463.png": "/Pc_Express_2.0/static/media/Gamer.9f6a8463.png",
+    "static/media/akali.cd62b251.jpg": "/Pc_Express_2.0/static/media/akali.cd62b251.jpg",
+    "static/media/cod.a3575b1d.jpg": "/Pc_Express_2.0/static/media/cod.a3575b1d.jpg",
+    "static/media/no mans sky.f31c4be3.png": "/Pc_Express_2.0/static/media/no mans sky.f31c4be3.png",
+    "static/media/Landing.css": "/Pc_Express_2.0/static/media/wallpeaper.745d9597.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b327b221.js",
+    "static/js/2.224cd3ad.chunk.js",
+    "static/css/main.a5ee0eda.chunk.css",
+    "static/js/main.d8182803.chunk.js"
+  ]
+}
