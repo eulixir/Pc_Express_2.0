@@ -1,8 +1,8 @@
 {
   "name": "web",
-  "homepage": "https://joaopealves.github.io/Pc_Express_2.0",
   "version": "0.1.0",
   "private": true,
+  
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
