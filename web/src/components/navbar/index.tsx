@@ -6,6 +6,12 @@ import { ImCart } from 'react-icons/im';
 import './styles/navbar.css';
 import { Link } from 'react-router-dom';
 const Navbar = () => {
+  const underCuntruction = () => {
+    window.alert(
+      'Hello, this option is currently under maintenance, try later, but if you want to contribute to the project, search for pc_express_2.0 on github :)'
+    );
+  };
+
   return (
     <div>
       <div className="navbarContainer">
@@ -59,7 +65,12 @@ const Navbar = () => {
                 <Link to="/aboutUs" className="dropdown-item" id="navItem">
                   About Us
                 </Link>
-                <a className="dropdown-item" id="navItem" href="#">
+                <a
+                  className="dropdown-item"
+                  onClick={underCuntruction}
+                  id="navItem"
+                  href="#"
+                >
                   About Devs
                 </a>
               </div>
@@ -80,24 +91,39 @@ const Navbar = () => {
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a className="dropdown-item" id="navItem" href="#">
+                <a
+                  className="dropdown-item"
+                  id="navItem"
+                  href="#"
+                  onClick={underCuntruction}
+                >
                   Pc Gamer
                 </a>
-                <a className="dropdown-item" id="navItem" href="#">
+                <a
+                  className="dropdown-item"
+                  id="navItem"
+                  href="#"
+                  onClick={underCuntruction}
+                >
                   WorkStation
                 </a>
-                <a className="dropdown-item" id="navItem" href="#">
+                <a
+                  className="dropdown-item"
+                  id="navItem"
+                  href="#"
+                  onClick={underCuntruction}
+                >
                   Home
                 </a>
               </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#" onClick={underCuntruction}>
                 <span>Contact</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#" onClick={underCuntruction}>
                 <span>FAQ</span>
               </a>
             </li>
