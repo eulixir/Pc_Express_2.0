@@ -12,7 +12,7 @@ import aboutUs from './pages/aboutUs';
 
 function Routes() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Route path="/" exact component={Landing} />
       <Route path="/Entry/Login" exact component={Login} />
       <Route path="/Entry/ChangePassword" exact component={ChangePassword} />
