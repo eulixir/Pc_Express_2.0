@@ -1,6 +1,5 @@
 import React from 'react';
 import { IoIosMenu } from 'react-icons/io';
-import { BsSearch } from 'react-icons/bs';
 import { RiUserFill } from 'react-icons/ri';
 import { ImCart } from 'react-icons/im';
 import './styles/navbar.css';
@@ -14,19 +13,6 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbarContainer">
-        <div className="landingLogo">
-          <p>Pc Express</p>
-        </div>
-        <div className="landingUser">
-          <Link to="Entry/Login">
-            <RiUserFill size={25} color={'#294CCA'} />
-          </Link>
-        </div>
-        <div className="landingCar">
-          <ImCart size={25} color={'#fff'} />
-        </div>
-      </div>
       <nav className="navbar navbar-expand-lg navbar-dark bg">
         <Link className="navbar-brand" to="/">
           Pc Express
@@ -56,36 +42,7 @@ const Navbar = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                <span>About</span>
-              </a>
-              <div
-                className="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <Link to="/aboutUs" className="dropdown-item" id="navItem">
-                  About Us
-                </Link>
-                <a
-                  className="dropdown-item"
-                  onClick={underCuntruction}
-                  id="navItem"
-                  href="#"
-                >
-                  About Devs
-                </a>
-              </div>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownMenuLink"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span>Computers</span>
+                <span>Pc builder</span>
               </a>
               <div
                 className="dropdown-menu"
@@ -117,6 +74,35 @@ const Navbar = () => {
                 </a>
               </div>
             </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span>About</span>
+              </a>
+              <div
+                className="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <Link to="/aboutUs" className="dropdown-item" id="navItem">
+                  About Us
+                </Link>
+                <a
+                  className="dropdown-item"
+                  onClick={underCuntruction}
+                  id="navItem"
+                  href="#"
+                >
+                  About Devs
+                </a>
+              </div>
+            </li>
             <li className="nav-item">
               <a className="nav-link" href="#" onClick={underCuntruction}>
                 <span>Contact</span>
@@ -128,9 +114,8 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <div className="searchLogo">
-            <input type="text" name="" id=""></input>
-            <BsSearch size={25} color={'#294CCA'} />
+          <div className="userLogo">
+            <RiUserFill size={25} color={'#294CCA'} />
           </div>
         </div>
       </nav>

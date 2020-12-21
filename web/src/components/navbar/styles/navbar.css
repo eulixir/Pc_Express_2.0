@@ -1,15 +1,3 @@
-.navbarContainer {
-  background-color: rgba(0, 0, 0, 0);
-  width: 100vw;
-  height: 80px;
-  display: flex;
-  align-items: center;
-}
-
-.landingLogo p {
-  background-color: #fff;
-}
-
 .navbar button {
   border: none;
 }
@@ -22,35 +10,11 @@
 .bg {
   background-color: rgba(0, 0, 0, 0);
 }
-.landingCar {
-  position: absolute;
-  right: 80px;
-}
 
-.landingUser {
+.userLogo {
   position: absolute;
   right: 150px;
-}
-
-.searchLogo {
-  position: absolute;
-  right: 80px;
-  width: 240px;
-  height: 50px;
-  display: flex;
   align-items: center;
-  border-radius: 18px;
-  background-color: white;
-  font: 700 0.8rem 'JetBrains Mono';
-}
-
-.searchLogo {
-  padding-left: 10px;
-}
-
-.searchLogo input {
-  outline: none;
-  border: none;
 }
 
 #navItem {
@@ -87,7 +51,7 @@
   .searchLogo {
     position: relative;
     right: 0;
-    margin-left: 0;
+    margin-left: 20px;
   }
   .navbar-toggler {
     margin-right: 45px;
