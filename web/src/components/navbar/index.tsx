@@ -115,7 +115,9 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="userLogo">
-            <RiUserFill size={25} color={'#294CCA'} />
+            <Link to="/Entry/Login">
+              <RiUserFill size={25} color={'#294CCA'} />
+            </Link>
           </div>
         </div>
       </nav>
