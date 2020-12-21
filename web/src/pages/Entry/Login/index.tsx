@@ -32,42 +32,45 @@ function Login() {
 
   return (
     <div className="background">
-      <div className="loginBackground">
-        <div className="entryContainer">
-          <div className="GoBackEntryIcon">
-            <Link to="/">
-              <BsArrowLeft color="white" size={50} />
-            </Link>
-          </div>
+      <div className="loginBackground backgroundSmooth">
+        <div className="backgroundEntrySmooth">
+          <div className="entryContainer">
+            <div className="GoBackEntryIcon">
+              <Link to="/">
+                <BsArrowLeft color="white" size={50} />
+              </Link>
+            </div>
 
-          <p>Login</p>
-          <form onSubmit={handleLogin} className="loginInputs">
-            <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => [setEmail(e.target.value)]}
-              required
-            />
-            <div className="passwordContainer">
+            <p>Log In</p>
+            <h5>Let's go build</h5>
+            <form onSubmit={handleLogin} className="loginInputs">
               <input
-                type={passwordShown ? 'text' : 'password'}
-                placeholder="Password"
-                onChange={(e) => [setPassword(e.target.value)]}
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => [setEmail(e.target.value)]}
                 required
               />
-              <BsEyeSlash
-                onClick={togglePasswordVisiblity}
-                size={32}
-                color="white"
-                className="showPassword"
-              />
+              <div className="passwordContainer">
+                <input
+                  type={passwordShown ? 'text' : 'password'}
+                  placeholder="Password"
+                  onChange={(e) => [setPassword(e.target.value)]}
+                  required
+                />
+                <BsEyeSlash
+                  onClick={togglePasswordVisiblity}
+                  size={32}
+                  color="white"
+                  className="showPassword"
+                />
+              </div>
+              <input type="submit" value="LOGIN" />
+            </form>
+            <div className="loginLinks">
+              <Link to="/Entry/ForgotPassword">Forgot Your Password?</Link>
+              <Link to="/Entry/Register">Don't Have Register?</Link>
             </div>
-            <input type="submit" value="LOGIN" />
-          </form>
-          <div className="loginLinks">
-            <Link to="/Entry/ForgotPassword">Forgot Your Password?</Link>
-            <Link to="/Entry/Register">Don't Have Register?</Link>
           </div>
         </div>
       </div>
