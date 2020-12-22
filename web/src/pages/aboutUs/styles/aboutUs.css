@@ -62,9 +62,10 @@
   align-items: center;
   justify-content: center;
   font: 700 2rem Roboto;
-  background-color: var(--default-blue);
-  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  color: rgb(51, 51, 51);
   text-align: center;
+  border: 5px solid var(--border-color);
 }
 .mvvItensContainer {
   width: 100vw;
@@ -73,13 +74,13 @@
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--default-blue);
 }
 
 .mvvItens {
   width: 300px;
   height: 200px;
-  border: 2px solid var(--default-blue);
+  border: 2px solid white;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -88,17 +89,43 @@
   text-align: center;
 }
 .mvvItens h5 {
-  color: rgb(22, 22, 22);
+  color: rgb(255, 255, 255);
   font: 700 1.2rem Roboto;
 }
 .mvvItens span {
-  color: rgb(54, 54, 54);
+  color: rgb(226, 226, 226);
 }
 
-@media (max-width: 1400px) {
-  .aboutUsHeaderTextContainer {
-    width: 70%;
-  }
+.creationContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(233, 233, 233);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.creationTextContainer {
+  color: var(--default-blue);
+  width: 80%;
+  height: 80%;
+  border: 2px solid var(--default-blue);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+}
+
+.creationTextContainer h5 {
+  margin-top: 50px;
+  font: 700 1.8rem Roboto;
+}
+.creationTextContainer span {
+  color: rgb(20, 20, 20);
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 @media (max-width: 1000px) {
@@ -116,5 +143,11 @@
 @media (max-width: 600px) {
   .mvvItensContainer {
     height: 180vw;
+  }
+}
+
+@media (max-width: 1400px) {
+  .aboutUsHeaderTextContainer {
+    width: 70%;
   }
 }

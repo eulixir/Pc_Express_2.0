@@ -48,11 +48,6 @@
 }
 
 @media (max-width: 991px) {
-  .searchLogo {
-    position: relative;
-    right: 0;
-    margin-left: 20px;
-  }
   .navbar-toggler {
     margin-right: 45px;
   }
