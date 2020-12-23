@@ -91,6 +91,7 @@
 .mvvItens h5 {
   color: rgb(255, 255, 255);
   font: 700 1.2rem Roboto;
+  text-align: justify;
 }
 .mvvItens span {
   color: rgb(226, 226, 226);
@@ -98,8 +99,13 @@
 
 .creationContainer {
   width: 100vw;
-  height: 100vh;
-  background-color: rgb(233, 233, 233);
+  height: 80vh;
+  background: rgb(249, 249, 249);
+  background: radial-gradient(
+    circle,
+    rgba(249, 249, 249, 1) 58%,
+    rgba(227, 227, 227, 1) 78%
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,13 +120,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  text-align: justify;
   background-color: white;
+}
+.creationTextContainer a {
+  color: var(--default-blue);
+  font: 700 1rem Roboto;
+  text-decoration: none;
+}
+.creationTextContainer a:hover {
+  color: rgb(0, 204, 255);
 }
 
 .creationTextContainer h5 {
   margin-top: 50px;
   font: 700 1.8rem Roboto;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 .creationTextContainer span {
   color: rgb(20, 20, 20);
@@ -143,6 +159,21 @@
 @media (max-width: 600px) {
   .mvvItensContainer {
     height: 180vw;
+  }
+  .creationTextContainer span {
+    color: rgb(20, 20, 20);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 850px) {
+  .creationContainer {
+    height: 150vh;
+  }
+}
+@media (max-width: 580px) {
+  .creationContainer {
+    height: 200vh;
   }
 }
 
