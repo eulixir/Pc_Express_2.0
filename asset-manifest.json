@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Pc_Express_2.0/static/css/main.4553a22c.chunk.css",
-    "main.js": "/Pc_Express_2.0/static/js/main.80093e1c.chunk.js",
-    "main.js.map": "/Pc_Express_2.0/static/js/main.80093e1c.chunk.js.map",
+    "main.css": "/Pc_Express_2.0/static/css/main.3e8b2949.chunk.css",
+    "main.js": "/Pc_Express_2.0/static/js/main.9bd350d0.chunk.js",
+    "main.js.map": "/Pc_Express_2.0/static/js/main.9bd350d0.chunk.js.map",
     "runtime-main.js": "/Pc_Express_2.0/static/js/runtime-main.b327b221.js",
     "runtime-main.js.map": "/Pc_Express_2.0/static/js/runtime-main.b327b221.js.map",
     "static/js/2.b0ac7a75.chunk.js": "/Pc_Express_2.0/static/js/2.b0ac7a75.chunk.js",
     "static/js/2.b0ac7a75.chunk.js.map": "/Pc_Express_2.0/static/js/2.b0ac7a75.chunk.js.map",
     "index.html": "/Pc_Express_2.0/index.html",
-    "static/css/main.4553a22c.chunk.css.map": "/Pc_Express_2.0/static/css/main.4553a22c.chunk.css.map",
+    "static/css/main.3e8b2949.chunk.css.map": "/Pc_Express_2.0/static/css/main.3e8b2949.chunk.css.map",
     "static/js/2.b0ac7a75.chunk.js.LICENSE.txt": "/Pc_Express_2.0/static/js/2.b0ac7a75.chunk.js.LICENSE.txt",
     "static/media/Gamer.9f6a8463.png": "/Pc_Express_2.0/static/media/Gamer.9f6a8463.png",
     "static/media/akali.cd62b251.jpg": "/Pc_Express_2.0/static/media/akali.cd62b251.jpg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.b327b221.js",
     "static/js/2.b0ac7a75.chunk.js",
-    "static/css/main.4553a22c.chunk.css",
-    "static/js/main.80093e1c.chunk.js"
+    "static/css/main.3e8b2949.chunk.css",
+    "static/js/main.9bd350d0.chunk.js"
   ]
 }
