@@ -17,6 +17,7 @@ export default function Landing() {
           <div className="sliderBackground">
             <Slider />
             <HelpToAssembly />
+
             <Footer />
           </div>
         </div>

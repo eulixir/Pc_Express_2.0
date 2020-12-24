@@ -1,5 +1,10 @@
 .site-footer {
-  background-color: #00114d;
+  background: rgb(14, 33, 98);
+  background: linear-gradient(
+    180deg,
+    rgba(14, 33, 98, 1) 23%,
+    rgba(0, 17, 77, 1) 75%
+  );
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;
@@ -109,6 +114,7 @@
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  transition: 0.4s;
 }
 .social-icons a:active,
 .social-icons a:focus,
