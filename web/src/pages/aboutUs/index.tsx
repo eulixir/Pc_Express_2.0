@@ -88,6 +88,7 @@ export default function aboutUs() {
               </span>
             </div>
           </div>
+          <div className="dreamAboutUsContainer">dasd</div>
         </div>
         <Footer />
       </div>
