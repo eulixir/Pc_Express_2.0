@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../../components/footer';
 import { ImEye, ImFlag } from 'react-icons/im';
 import { FaHandshake } from 'react-icons/fa';
+import gamesImage from '../../assets/games-image.png';
 
 export default function aboutUs() {
   return (
@@ -88,7 +89,23 @@ export default function aboutUs() {
               </span>
             </div>
           </div>
-          <div className="dreamAboutUsContainer">dasd</div>
+          <div className="dreamAboutUsContainer">
+            <div className="dreamAboutUsContainerOne">
+              <img src={gamesImage} />
+            </div>
+            <div className="dreamAboutUsContainerTwo">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Pellentesque vestibulum eu eros sit amet dapibus. Mauris et
+                volutpat nibh, placerat dapibus nibh. Cras quis consectetur dui,
+                quis ullamcorper sem. Proin ornare sem eget risus pulvinar, eu
+                interdum odio finibus. Duis a vulputate lectus. Aenean sed
+                sodales magna. Nullam venenatis neque leo, sed elementum mi
+                tempus sed. Aenean augue felis, commodo a magna vitae, molestie
+                ultrices arcu.
+              </p>
+            </div>
+          </div>
         </div>
         <Footer />
       </div>
