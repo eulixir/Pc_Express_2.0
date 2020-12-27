@@ -23,7 +23,7 @@
 
 .abousUsContainer {
   background-color: rgb(255, 255, 255);
-  height: 400vh;
+
   width: 100vw;
 }
 .aboutUsHeaderTextContainer h5,
@@ -180,6 +180,12 @@
   margin-right: 100px;
   text-align: justify;
   font: 500 1.8rem Roboto;
+}
+
+.employeesContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: violet;
 }
 
 @media (max-width: 1000px) {
