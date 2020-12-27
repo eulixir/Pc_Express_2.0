@@ -1,6 +1,7 @@
 .aboutUsHeader {
   /* background-color: rgba(0, 0, 0); */
   background-image: url('../../../assets/akaliSmooth.jpg');
+  background-position: center;
   background-size: cover;
   height: 100vh;
   width: 100vw;

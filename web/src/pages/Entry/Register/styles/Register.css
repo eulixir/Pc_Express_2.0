@@ -6,6 +6,7 @@
   justify-content: center;
   background-image: url('../../../../assets/wallpeaper.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 .registerBackground p {

@@ -1,0 +1,120 @@
+.section_padding {
+  padding: 140px 0px;
+}
+.section_tittle {
+  margin-bottom: 70px;
+}
+@media (max-width: 991px) {
+  .our_feature {
+    padding: 70px 0 40px;
+  }
+}
+@media (max-width: 991px) {
+  .our_feature .single_feature {
+    margin-bottom: 30px;
+  }
+}
+.our_feature .single_feature h4 {
+  margin: 42px 0 16px;
+}
+@media (max-width: 991px) {
+  .our_feature .single_feature h4 {
+    margin: 20px 0 15px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .section_padding {
+    padding: 80px 0px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .section_padding {
+    padding: 70px 0px;
+  }
+}
+@media (max-width: 576px) {
+  .section_padding {
+    padding: 70px 0px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .section_padding {
+    padding: 70px 0px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 3640px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+@media (max-width: 576px) {
+  .section_tittle {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .section_tittle {
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .section_tittle {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .section_tittle {
+    margin-bottom: 50px;
+  }
+}
+
+.section_tittle h2 {
+  font-size: 48px;
+  color: #222;
+  line-height: 45px;
+  font-weight: 700;
+  position: relative;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 991px) {
+  .section_tittle h2 {
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .section_tittle h2 {
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+.section_tittle p {
+  color: #777777;
+  font-weight: 300;
+  text-transform: capitalize;
+  line-height: 30px;
+  font-size: 16px;
+}
+@media (max-width: 991px) {
+  .our_feature .single_feature {
+    margin-bottom: 30px;
+  }
+}
+
+.our_feature .single_feature h4 {
+  margin: 42px 0 16px;
+}
+
+@media (max-width: 991px) {
+  .our_feature .single_feature h4 {
+    margin: 20px 0 15px;
+  }
+}
