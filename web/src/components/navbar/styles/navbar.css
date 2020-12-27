@@ -51,6 +51,30 @@
   font: 700 1rem Roboto;
 }
 
+.dropdown-menu {
+  border: 0px solid rgba(0, 0, 0, 0.15) !important;
+  background-color: #fafafa;
+}
+
+.dropdown .dropdown-menu {
+  transition: all 0.5s;
+  overflow: hidden;
+  transform-origin: top center;
+  transform: scale(1, 0);
+  display: block;
+}
+
+.dropdown .dropdown-menu .dropdown-item {
+  font-size: 14px;
+  padding: 9px 18px !important;
+  color: #000 !important;
+  text-transform: capitalize;
+}
+
+.dropdown:hover .dropdown-menu {
+  transform: scale(1);
+}
+
 @media (max-width: 991px) {
   .userLogo {
     right: 50px;

@@ -1,7 +1,8 @@
 import React from 'react';
 import './styles/ceoSlider.css';
 import './styles/animateSlider.css';
-export default function ceoSlider() {
+
+export default function CeoSlider() {
   return (
     <section className="client_review padding_bottom">
       <div className="container">
