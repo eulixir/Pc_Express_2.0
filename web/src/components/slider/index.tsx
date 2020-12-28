@@ -1,7 +1,7 @@
 import React from 'react';
 import noManSkyImg from '../../assets/no mans sky.png';
 import cod from '../../assets/cod.jpg';
-import gamer from '../../assets/Gamer.png';
+import horizon from '../../assets/horizonZero.jpg';
 import akali from '../../assets/akali.jpg';
 import './styles/slider.css';
 
@@ -22,7 +22,7 @@ export default function Slider() {
               <img src={cod} className="d-block w-100" alt="..." />
             </div>
             <div className="carousel-item">
-              <img src={gamer} className="d-block w-100" alt="..." />
+              <img src={horizon} className="d-block w-100" alt="..." />
             </div>
             <div className="carousel-item">
               <img src={akali} className="d-block w-100" alt="..." />

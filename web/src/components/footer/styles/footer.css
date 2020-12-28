@@ -70,20 +70,6 @@
 .copyright-text {
   margin: 0;
 }
-@media (max-width: 991px) {
-  .site-footer [class^='col-'] {
-    margin-bottom: 30px;
-  }
-}
-@media (max-width: 767px) {
-  .site-footer {
-    padding-bottom: 0;
-  }
-  .site-footer .copyright-text,
-  .site-footer .social-icons {
-    text-align: center;
-  }
-}
 .social-icons {
   padding-left: 0;
   margin-bottom: 0;
@@ -130,9 +116,15 @@
 }
 .social-icons a.linkedin:hover {
   background-color: #0441c4;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(167, 167, 167, 0.521);
+  color: #ffffff;
 }
 .social-icons a.github:hover {
   background-color: #000000;
+  transform: translateY(-3px);
+  /* box-shadow: 0 4px 17px rgba(197, 197, 197, 0.521); */
+  color: #ffffff;
 }
 .social-icons a.instagram:hover {
   background: rgb(161, 34, 195);
@@ -143,6 +135,12 @@
     rgba(195, 34, 151, 1) 50%,
     rgba(253, 188, 45, 1) 100%
   );
+  transform: translateY(-3px);
+  transform: translateY(-3px);
+  /* box-shadow: 0 4px 17px rgba(197, 197, 197, 0.521); */
+  color: #ffffff;
+
+  color: #ffffff;
 }
 .social-icons a.dribbble:hover {
   background-color: #ea4c89;
@@ -152,5 +150,20 @@
     display: block;
     margin-right: 0;
     font-weight: 600;
+  }
+}
+
+@media (max-width: 991px) {
+  .site-footer [class^='col-'] {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .site-footer {
+    padding-bottom: 0;
+  }
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
+    text-align: center;
   }
 }
