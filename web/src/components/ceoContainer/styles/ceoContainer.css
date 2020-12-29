@@ -1,120 +1,74 @@
-.section_padding {
-  padding: 140px 0px;
+#cardImg {
+  height: 240px;
+  border-radius: 50%;
+  width: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.section_tittle {
-  margin-bottom: 70px;
-}
-@media (max-width: 991px) {
-  .our_feature {
-    padding: 70px 0 40px;
-  }
-}
-@media (max-width: 991px) {
-  .our_feature .single_feature {
-    margin-bottom: 30px;
-  }
-}
-.our_feature .single_feature h4 {
-  margin: 42px 0 16px;
-}
-@media (max-width: 991px) {
-  .our_feature .single_feature h4 {
-    margin: 20px 0 15px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .section_padding {
-    padding: 80px 0px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .section_padding {
-    padding: 70px 0px;
-  }
-}
-@media (max-width: 576px) {
-  .section_padding {
-    padding: 70px 0px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .section_padding {
-    padding: 70px 0px;
-  }
-}
-@media only screen and (min-width: 1200px) and (max-width: 3640px) {
-  .container {
-    max-width: 1170px;
-  }
-}
-@media (max-width: 576px) {
-  .section_tittle {
-    margin-bottom: 50px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .section_tittle {
-    margin-bottom: 50px;
-  }
+MDBCardTitle p {
+  text-align: center;
+  color: red;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .section_tittle {
-    font-size: 50px;
-  }
+.cardImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(41, 76, 202);
+  background: linear-gradient(
+    180deg,
+    rgba(41, 76, 202, 1) 1%,
+    rgba(80, 111, 222, 1) 56%,
+    rgb(0, 0, 0) 57%,
+    rgb(255, 255, 255) 58%,
+    rgb(255, 255, 255) 98%
+  );
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .section_tittle {
-    margin-bottom: 50px;
-  }
+.ownerNameCard {
+  text-align: center;
 }
 
-.section_tittle h2 {
-  font-size: 48px;
-  color: #222;
-  line-height: 45px;
-  font-weight: 700;
-  position: relative;
-  position: relative;
-  margin-bottom: 25px;
+.cardItens {
+  display: flex;
+  justify-content: space-between;
 }
 
-@media (max-width: 991px) {
-  .section_tittle h2 {
-    font-size: 25px;
-    line-height: 35px;
-    margin-bottom: 15px;
-  }
+.SiGithub {
+  color: rgb(87, 87, 87);
+}
+.SiGithub:hover {
+  color: rgb(0, 0, 0);
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .section_tittle h2 {
-    font-size: 35px;
-    line-height: 40px;
-    margin-bottom: 10px;
-  }
+.ImLinkedin {
+  color: rgb(87, 87, 87);
 }
 
-.section_tittle p {
-  color: #777777;
-  font-weight: 300;
-  text-transform: capitalize;
-  line-height: 30px;
-  font-size: 16px;
+.ImLinkedin:hover {
+  color: rgb(53, 119, 240);
 }
-@media (max-width: 991px) {
-  .our_feature .single_feature {
-    margin-bottom: 30px;
-  }
+.steamCardContainer {
+  background-size: 32px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(87, 87, 87);
+  border-radius: 50%;
+}
+.ImSteam {
+  color: white;
 }
 
-.our_feature .single_feature h4 {
-  margin: 42px 0 16px;
-}
-
-@media (max-width: 991px) {
-  .our_feature .single_feature h4 {
-    margin: 20px 0 15px;
-  }
+.steamCardContainer:hover {
+  background: rgb(0, 15, 69);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 15, 69, 1) 0%,
+    rgba(0, 27, 87, 1) 25%,
+    rgba(11, 41, 98, 1) 43%,
+    rgba(53, 123, 226, 1) 99%
+  );
 }
