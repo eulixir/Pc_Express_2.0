@@ -117,7 +117,7 @@
 .social-icons a.linkedin:hover {
   background-color: #0441c4;
   transform: translateY(-3px);
-  box-shadow: 0 4px 17px rgba(167, 167, 167, 0.521);
+
   color: #ffffff;
 }
 .social-icons a.github:hover {
@@ -130,10 +130,10 @@
   background: rgb(161, 34, 195);
   background: linear-gradient(
     214deg,
-    rgba(161, 34, 195, 1) 0%,
+    rgb(186, 30, 230) 0%,
     rgba(181, 34, 168, 1) 39%,
     rgba(195, 34, 151, 1) 50%,
-    rgba(253, 188, 45, 1) 100%
+    rgb(255, 192, 56) 100%
   );
   transform: translateY(-3px);
   transform: translateY(-3px);

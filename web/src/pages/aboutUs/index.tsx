@@ -109,8 +109,9 @@ export default function aboutUs() {
             </div>
           </div>
         </div>
-        <div className="employeesContainer">ds</div>
+
         <CeoSlider />
+
         <Footer />
       </div>
     </div>

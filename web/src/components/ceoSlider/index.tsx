@@ -4,97 +4,242 @@ import './styles/animateSlider.css';
 
 export default function CeoSlider() {
   return (
-    <section className="client_review padding_bottom">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-lg-7">
-            <div className="section_tittle text-center">
-              <h2>What Customer’s Say About Us</h2>
-              <p>
-                As you pour the first glass of your favorite Chianti or
-                Chardonnay and settle into an <br />
-                intimate Friday evening.
-              </p>
+    <div className="container my-4">
+      <p className="font-weight-bold">
+        Bootstrap carousel multiple items is an improved version of the standard
+        bootstrap carousel which allows you to put inside more than one element.
+      </p>
+
+      <p>
+        <strong>Detailed</strong> documentation and more examples of Bootstrap
+        grid you can find in our{' '}
+        <a
+          href="https://mdbootstrap.com/docs/jquery/javascript/carousel/"
+          target="_blank"
+        >
+          Bootstrap Carousel Docs
+        </a>
+        .
+      </p>
+
+      <hr className="my-4" />
+
+      <div
+        id="multi-item-example"
+        className="carousel slide carousel-multi-item"
+        data-ride="carousel"
+      >
+        <div className="controls-top">
+          <a
+            className="btn-floating"
+            href="#multi-item-example"
+            data-slide="prev"
+          >
+            <i className="fa fa-chevron-left"></i>
+          </a>
+          <a
+            className="btn-floating"
+            href="#multi-item-example"
+            data-slide="next"
+          >
+            <i className="fa fa-chevron-right"></i>
+          </a>
+        </div>
+
+        <ol className="carousel-indicators">
+          <li
+            data-target="#multi-item-example"
+            data-slide-to="0"
+            className="active"
+          ></li>
+          <li data-target="#multi-item-example" data-slide-to="1"></li>
+          <li data-target="#multi-item-example" data-slide-to="2"></li>
+        </ol>
+
+        <div className="carousel-inner" role="listbox">
+          {/* <!--First slide--> */}
+          <div className="carousel-item active">
+            <div className="row">
+              <div className="col-md-4">
+                <div className="card mb-2">
+                  <img
+                    className="card-img-top"
+                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+                    alt="Card image cap"
+                  />
+                  <div className="card-body">
+                    <h4 className="card-title">Card title</h4>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a className="btn btn-primary">Button</a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-4 clearfix d-none d-md-block">
+                <div className="card mb-2">
+                  <img
+                    className="card-img-top"
+                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                    alt="Card image cap"
+                  />
+                  <div className="card-body">
+                    <h4 className="card-title">Card title</h4>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a className="btn btn-primary">Button</a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-4 clearfix d-none d-md-block">
+                <div className="card mb-2">
+                  <img
+                    className="card-img-top"
+                    src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
+                    alt="Card image cap"
+                  />
+                  <div className="card-body">
+                    <h4 className="card-title">Card title</h4>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a className="btn btn-primary">Button</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="client_review_iner owl-carousel">
-              <div className="client_review_single">
-                <img src="img/client_1.png" alt="" />
-                <h4>Helena Phillips</h4>
-                <span>CEO at Google</span>
-                <p>
-                  Accessories Here you can find the best computer accessory for
-                  your laptop, monitor, printer, scanner, speaker, projector,
-                  hardware and more.
-                </p>
+          {/* <!--/.First slide--> 
+
+          {/* <!--Second slide--> */}
+          <div className="carousel-item">
+            <div className="row">
+              <div className="col-md-4">
+                <div className="card mb-2">
+                  <img
+                    className="card-img-top"
+                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg"
+                    alt="Card image cap"
+                  />
+                  <div className="card-body">
+                    <h4 className="card-title">Card title</h4>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a className="btn btn-primary">Button</a>
+                  </div>
+                </div>
               </div>
-              <div className="client_review_single">
-                <img src="img/client_2.png" alt="" />
-                <h4>Helena Phillips</h4>
-                <span>CEO at Google</span>
-                <p>
-                  Accessories Here you can find the best computer accessory for
-                  your laptop, monitor, printer, scanner, speaker, projector,
-                  hardware and more.
-                </p>
+
+              <div className="col-md-4 clearfix d-none d-md-block">
+                <div className="card mb-2">
+                  <img
+                    className="card-img-top"
+                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg"
+                    alt="Card image cap"
+                  />
+                  <div className="card-body">
+                    <h4 className="card-title">Card title</h4>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a className="btn btn-primary">Button</a>
+                  </div>
+                </div>
               </div>
-              <div className="client_review_single">
-                <img src="img/client_3.png" alt="" />
-                <h4>Helena Phillips</h4>
-                <span>CEO at Google</span>
-                <p>
-                  Accessories Here you can find the best computer accessory for
-                  your laptop, monitor, printer, scanner, speaker, projector,
-                  hardware and more.
-                </p>
-              </div>
-              <div className="client_review_single">
-                <img src="img/client_1.png" alt="" />
-                <h4>Helena Phillips</h4>
-                <span>CEO at Google</span>
-                <p>
-                  Accessories Here you can find the best computer accessory for
-                  your laptop, monitor, printer, scanner, speaker, projector,
-                  hardware and more.
-                </p>
-              </div>
-              <div className="client_review_single">
-                <img src="img/client_2.png" alt="" />
-                <h4>Helena Phillips</h4>
-                <span>CEO at Google</span>
-                <p>
-                  Accessories Here you can find the best computer accessory for
-                  your laptop, monitor, printer, scanner, speaker, projector,
-                  hardware and more.
-                </p>
-              </div>
-              <div className="client_review_single">
-                <img src="img/client_3.png" alt="" />
-                <h4>Helena Phillips</h4>
-                <span>CEO at Google</span>
-                <p>
-                  Accessories Here you can find the best computer accessory for
-                  your laptop, monitor, printer, scanner, speaker, projector,
-                  hardware and more.
-                </p>
-              </div>
-              <div className="client_review_single">
-                <img src="img/client_1.png" alt="" />
-                <h4>Helena Phillips</h4>
-                <span>CEO at Google</span>
-                <p>
-                  Accessories Here you can find the best computer accessory for
-                  your laptop, monitor, printer, scanner, speaker, projector,
-                  hardware and more.
-                </p>
+
+              <div className="col-md-4 clearfix d-none d-md-block">
+                <div className="card mb-2">
+                  <img
+                    className="card-img-top"
+                    src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg"
+                    alt="Card image cap"
+                  />
+                  <div className="card-body">
+                    <h4 className="card-title">Card title</h4>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a className="btn btn-primary">Button</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          {/* <!--/.Second slide--> */}
+
+          {/* <!--Third slide--> */}
+          <div className="carousel-item">
+            <div className="row">
+              <div className="col-md-4">
+                <div className="card mb-2">
+                  <img
+                    className="card-img-top"
+                    src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(53).jpg"
+                    alt="Card image cap"
+                  />
+                  <div className="card-body">
+                    <h4 className="card-title">Card title</h4>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a className="btn btn-primary">Button</a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-4 clearfix d-none d-md-block">
+                <div className="card mb-2">
+                  <img
+                    className="card-img-top"
+                    src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
+                    alt="Card image cap"
+                  />
+                  <div className="card-body">
+                    <h4 className="card-title">Card title</h4>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a className="btn btn-primary">Button</a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-4 clearfix d-none d-md-block">
+                <div className="card mb-2">
+                  <img
+                    className="card-img-top"
+                    src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(51).jpg"
+                    alt="Card image cap"
+                  />
+                  <div className="card-body">
+                    <h4 className="card-title">Card title</h4>
+                    <p className="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a className="btn btn-primary">Button</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <!--/.Third slide--> */}
         </div>
+        {/* <!--/.Slides--> */}
       </div>
-    </section>
+      {/* <!--/.Carousel Wrapper--> */}
+    </div>
   );
 }
