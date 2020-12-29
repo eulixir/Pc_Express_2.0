@@ -17,7 +17,7 @@ import './styles/ceoContainer.css';
 const CeoContainer = () => {
   return (
     <MDBCol style={{ maxWidth: '22rem' }}>
-      <MDBCard>
+      <MDBCard id="card">
         <div className="cardImg">
           <img
             id="cardImg"

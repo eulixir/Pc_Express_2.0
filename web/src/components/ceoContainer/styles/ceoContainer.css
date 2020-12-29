@@ -72,3 +72,9 @@ MDBCardTitle p {
     rgba(53, 123, 226, 1) 99%
   );
 }
+
+#card {
+  -webkit-box-shadow: 0px 0px 47px -4px rgba(148, 148, 148, 1);
+  -moz-box-shadow: 0px 0px 47px -4px rgba(148, 148, 148, 1);
+  box-shadow: 0px 0px 47px -4px rgba(148, 148, 148, 1);
+}
