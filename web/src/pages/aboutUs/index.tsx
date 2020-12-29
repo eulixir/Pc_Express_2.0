@@ -3,7 +3,7 @@ import './styles/aboutUs.css';
 import Navbar from '../../components/navbar/index';
 import { Link } from 'react-router-dom';
 
-import CeoSlider from '../../components/ceoSlider';
+import CeoContainer from '../../components/ceoContainer';
 import Footer from '../../components/footer';
 import { ImEye, ImFlag } from 'react-icons/im';
 import { FaHandshake } from 'react-icons/fa';
@@ -109,9 +109,9 @@ export default function aboutUs() {
             </div>
           </div>
         </div>
-
-        <CeoSlider />
-
+        <div className="employeesContainer">
+          <CeoContainer />
+        </div>
         <Footer />
       </div>
     </div>

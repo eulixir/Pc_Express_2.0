@@ -4,56 +4,73 @@ import cod from '../../assets/cod.jpg';
 import horizon from '../../assets/horizonZero.jpg';
 import akali from '../../assets/akali.jpg';
 import './styles/slider.css';
+import {
+  MDBCarousel,
+  MDBCarouselCaption,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBView,
+  MDBMask,
+  MDBContainer,
+} from 'mdbreact';
 
 export default function Slider() {
   return (
-    <div className="landingSliderContainer">
-      <div className="landingSlider">
-        <div
-          id="carouselExampleFade"
-          className="carousel slide carousel-fade"
-          data-ride="carousel"
-        >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img src={noManSkyImg} className="d-block w-100" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src={cod} className="d-block w-100" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src={horizon} className="d-block w-100" alt="..." />
-            </div>
-            <div className="carousel-item">
-              <img src={akali} className="d-block w-100" alt="..." />
-            </div>
-          </div>
-          <a
-            className="carousel-control-prev"
-            href="#carouselExampleFade"
-            role="button"
-            data-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="sr-only">Previous</span>
-          </a>
-          <a
-            className="carousel-control-next"
-            href="#carouselExampleFade"
-            role="button"
-            data-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </div>
+    <MDBContainer>
+      <MDBCarousel
+        activeItem={1}
+        length={4}
+        showControls={true}
+        showIndicators={true}
+        className="z-depth-1"
+      >
+        <MDBCarouselInner>
+          <MDBCarouselItem itemId="1">
+            <MDBView>
+              <img className="d-block w-100" src={akali} alt="First slide" />
+              <MDBMask overlay="black-light" />
+            </MDBView>
+            <MDBCarouselCaption>
+              <h3 className="h3-responsive">Light mask</h3>
+              <p>First text</p>
+            </MDBCarouselCaption>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId="2">
+            <MDBView>
+              <img className="d-block w-100" src={horizon} alt="Second slide" />
+              <MDBMask overlay="black-strong" />
+            </MDBView>
+            <MDBCarouselCaption>
+              <h3 className="h3-responsive">Strong mask</h3>
+              <p>Second text</p>
+            </MDBCarouselCaption>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId="3">
+            <MDBView>
+              <img className="d-block w-100" src={cod} alt="Third slide" />
+              <MDBMask overlay="black-slight" />
+            </MDBView>
+            <MDBCarouselCaption>
+              <h3 className="h3-responsive">Slight Mast</h3>
+              <p>Third text</p>
+            </MDBCarouselCaption>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId="4">
+            <MDBView>
+              <img
+                className="d-block w-100"
+                src={noManSkyImg}
+                alt="Third slide"
+              />
+              <MDBMask overlay="black-slight" />
+            </MDBView>
+            <MDBCarouselCaption>
+              <h3 className="h3-responsive">Slight Mast</h3>
+              <p>Third text</p>
+            </MDBCarouselCaption>
+          </MDBCarouselItem>
+        </MDBCarouselInner>
+      </MDBCarousel>
+    </MDBContainer>
   );
 }

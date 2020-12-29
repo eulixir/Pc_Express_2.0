@@ -186,7 +186,10 @@
 .employeesContainer {
   width: 100vw;
   height: 100vh;
-  background-color: violet;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1000px) {
