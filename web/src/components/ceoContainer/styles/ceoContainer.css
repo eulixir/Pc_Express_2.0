@@ -5,10 +5,6 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-MDBCardTitle p {
-  text-align: center;
-  color: red;
-}
 
 .cardImg {
   display: flex;

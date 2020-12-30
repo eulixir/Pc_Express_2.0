@@ -107,7 +107,12 @@ export default function aboutUs() {
           </div>
         </div>
         <div className="employeesContainer">
-          <CeoContainer />
+          <div className="aboutUsMemberText">
+            <span>Members </span>
+          </div>
+          <div className="aboutUsMemberCard">
+            <CeoContainer />
+          </div>
         </div>
         <Footer />
       </div>
