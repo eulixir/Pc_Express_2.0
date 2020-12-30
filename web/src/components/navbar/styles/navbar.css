@@ -1,6 +1,12 @@
 .navbar button {
   border: none;
 }
+.pcExpress-logo {
+  font: 400 1.4rem 'Charmonman';
+}
+#expressSpan {
+  color: rgb(59, 138, 230);
+}
 
 .navbar button:focus {
   border: none;
@@ -24,10 +30,11 @@
 #navItem {
   font: 700 1rem 'Roboto';
   color: rgb(99, 99, 99);
+  transition: 0.4s;
 }
 
 #navItem:hover {
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(212, 212, 212);
   color: #000;
 }
 #navItem:focus {

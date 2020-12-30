@@ -73,7 +73,13 @@ export default function Footer() {
           <div className="col-md-8 col-sm-6 col-xs-12">
             <p className="copyright-text">
               Copyright &copy; {currentYear} All Rights Reserved by
-              <a href="#"> PcExpress</a>.
+              <a href="#">
+                {' '}
+                <span className="pcExpress-logo">
+                  Pc<span id="expressSpan">Express</span>
+                </span>
+              </a>
+              .
             </p>
           </div>
 

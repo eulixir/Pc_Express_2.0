@@ -97,14 +97,11 @@ export default function aboutUs() {
             </div>
             <div className="dreamAboutUsContainerTwo">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Pellentesque vestibulum eu eros sit amet dapibus. Mauris et
-                volutpat nibh, placerat dapibus nibh. Cras quis consectetur dui,
-                quis ullamcorper sem. Proin ornare sem eget risus pulvinar, eu
-                interdum odio finibus. Duis a vulputate lectus. Aenean sed
-                sodales magna. Nullam venenatis neque leo, sed elementum mi
-                tempus sed. Aenean augue felis, commodo a magna vitae, molestie
-                ultrices arcu.
+                Our biggest dream is to see a world with a greater technological
+                advancement, because in our conception, if people have access to
+                a better work environment, consequently it will decrease the
+                processing delay time among others and in return it will improve
+                the work of all
               </p>
             </div>
           </div>

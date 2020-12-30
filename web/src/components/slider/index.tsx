@@ -30,30 +30,18 @@ export default function Slider() {
               <img className="d-block w-100" src={akali} alt="First slide" />
               <MDBMask overlay="black-light" />
             </MDBView>
-            <MDBCarouselCaption>
-              <h3 className="h3-responsive">Akali</h3>
-              <p>League of Legends</p>
-            </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="2">
             <MDBView>
               <img className="d-block w-100" src={horizon} alt="Second slide" />
               <MDBMask overlay="black-strong" />
             </MDBView>
-            <MDBCarouselCaption>
-              <h3 className="h3-responsive">Aloy</h3>
-              <p>Horizon Zero Dawn</p>
-            </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="3">
             <MDBView>
               <img className="d-block w-100" src={cod} alt="Third slide" />
               <MDBMask overlay="black-slight" />
             </MDBView>
-            <MDBCarouselCaption>
-              <h3 className="h3-responsive">Soldier</h3>
-              <p>Call of Duty Warzone</p>
-            </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="4">
             <MDBView>
@@ -64,10 +52,6 @@ export default function Slider() {
               />
               <MDBMask overlay="black-slight" />
             </MDBView>
-            <MDBCarouselCaption>
-              <h3 className="h3-responsive">Traveler</h3>
-              <p>No Mans Sky</p>
-            </MDBCarouselCaption>
           </MDBCarouselItem>
         </MDBCarouselInner>
       </MDBCarousel>

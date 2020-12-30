@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoIosMenu } from 'react-icons/io';
 import { RiUserFill } from 'react-icons/ri';
-import { ImCart } from 'react-icons/im';
+
 import './styles/navbar.css';
 import { Link } from 'react-router-dom';
 const Navbar = () => {
@@ -14,10 +14,9 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg">
-        <Link className="navbar-brand" to="/">
-          Pc Express
+        <Link className="navbar-brand pcExpress-logo" to="/">
+          Pc <span id="expressSpan">Express</span>
         </Link>
-        <a className="nav-link" href="#"></a>
 
         <button
           className="navbar-toggler"
