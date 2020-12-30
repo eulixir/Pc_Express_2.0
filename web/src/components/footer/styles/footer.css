@@ -1,10 +1,6 @@
 .site-footer {
-  background: rgb(14, 33, 98);
-  background: linear-gradient(
-    180deg,
-    rgba(14, 33, 98, 1) 23%,
-    rgba(0, 17, 77, 1) 75%
-  );
+  background: rgb(0, 17, 77, 1);
+
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;

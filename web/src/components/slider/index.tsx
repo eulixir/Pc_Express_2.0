@@ -31,8 +31,8 @@ export default function Slider() {
               <MDBMask overlay="black-light" />
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Light mask</h3>
-              <p>First text</p>
+              <h3 className="h3-responsive">Akali</h3>
+              <p>League of Legends</p>
             </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="2">
@@ -41,8 +41,8 @@ export default function Slider() {
               <MDBMask overlay="black-strong" />
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Strong mask</h3>
-              <p>Second text</p>
+              <h3 className="h3-responsive">Aloy</h3>
+              <p>Horizon Zero Dawn</p>
             </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="3">
@@ -51,8 +51,8 @@ export default function Slider() {
               <MDBMask overlay="black-slight" />
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Slight Mast</h3>
-              <p>Third text</p>
+              <h3 className="h3-responsive">Soldier</h3>
+              <p>Call of Duty Warzone</p>
             </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="4">
@@ -65,8 +65,8 @@ export default function Slider() {
               <MDBMask overlay="black-slight" />
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Slight Mast</h3>
-              <p>Third text</p>
+              <h3 className="h3-responsive">Traveler</h3>
+              <p>No Mans Sky</p>
             </MDBCarouselCaption>
           </MDBCarouselItem>
         </MDBCarouselInner>

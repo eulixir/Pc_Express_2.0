@@ -9,7 +9,7 @@ export default function HelpToAssembly() {
           <p>Looking for help with assembling your computer?</p>
         </span>
       </div>
-      <div className="teste">d</div>
+      <div className="teste"></div>
     </div>
   );
 }

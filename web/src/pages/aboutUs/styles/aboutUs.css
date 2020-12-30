@@ -180,7 +180,7 @@
   margin-left: 100px;
   margin-right: 100px;
   text-align: justify;
-  font: 500 1.8rem Roboto;
+  font: 500 1.4rem Roboto;
 }
 
 .employeesContainer {
@@ -270,6 +270,6 @@
 }
 @media (max-width: 400px) {
   .dreamAboutUsContainer {
-    height: 250vh;
+    height: 200vh;
   }
 }
