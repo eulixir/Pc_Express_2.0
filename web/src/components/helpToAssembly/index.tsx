@@ -6,30 +6,23 @@ import { BsGear } from 'react-icons/bs';
 export default function HelpToAssembly() {
   return (
     <div className="helpToAssemblyContainer">
-      <div className="helpToAssemblyText">
-        <span>
-          <p>Looking for help with assembling your computer?</p>
-        </span>
+      <div className="iconsAssemblyContainer">
+        <BsController size="40" color={'rgb(76, 233, 29)'} />
+        <span id="BsController">Build your gamer monster</span>
       </div>
-      <div className="helpToAssemblyIconsContainer">
-        <BsController
-          id="assemblyIconsContainer"
-          size="40"
-          color={'rgb(76, 233, 29)'}
-        />
 
-        <span>/</span>
-        <RiHome2Line
-          id="assemblyIconsContainer"
-          size="40"
-          color={'rgb(230, 233, 29)'}
-        />
-        <span>/</span>
-        <BsGear
-          id="assemblyIconsContainer"
-          size="40"
-          color={'rgb(233, 29, 223)'}
-        />
+      <span>/</span>
+
+      <div className="iconsAssemblyContainer">
+        <RiHome2Line size="40" color={'rgb(230, 233, 29)'} />
+        <span id="RiHome2Line">Build your home pc</span>
+      </div>
+
+      <span>/</span>
+
+      <div className="iconsAssemblyContainer">
+        <BsGear size="40" color={'rgb(233, 29, 223)'} />
+        <span id="BsGear">Build your work center</span>
       </div>
     </div>
   );

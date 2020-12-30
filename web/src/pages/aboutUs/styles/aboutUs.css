@@ -11,6 +11,7 @@
   color: white;
   font: 700 1.6rem 'Roboto';
   align-items: center;
+  background-attachment: fixed;
 }
 
 .aboutUsHeaderTextContainer {
