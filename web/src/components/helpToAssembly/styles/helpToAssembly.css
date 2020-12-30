@@ -7,7 +7,6 @@
   flex-direction: row;
   color: white;
 }
-
 .helpToAssemblyText {
   height: 80%;
   width: 60%;
@@ -26,8 +25,35 @@
   font: 700 1.2rem 'Roboto';
   height: 100%;
   text-align: center;
-
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.helpToAssemblyIconsContainer {
+  font: 700 2rem Roboto;
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#assemblyIconsContainer {
+  transition: 0.8s;
+  cursor: pointer;
+}
+#assemblyIconsContainer:hover {
+  filter: brightness(230%);
+}
+@media (max-width: 1400px) {
+  .helpToAssemblyText span {
+    font: 700 0.8rem 'Roboto';
+  }
+}
+@media (max-width: 750px) {
+  .helpToAssemblyContainer {
+    flex-direction: column;
+  }
+  .helpToAssemblyText {
+    border-right: none;
+  }
 }
