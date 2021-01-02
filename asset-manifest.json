@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/Pc_Express_2.0/static/css/main.0bcb2873.chunk.css",
-    "main.js": "/Pc_Express_2.0/static/js/main.40420b2d.chunk.js",
-    "main.js.map": "/Pc_Express_2.0/static/js/main.40420b2d.chunk.js.map",
+    "main.css": "/Pc_Express_2.0/static/css/main.5b6dfd5d.chunk.css",
+    "main.js": "/Pc_Express_2.0/static/js/main.9d8fb95a.chunk.js",
+    "main.js.map": "/Pc_Express_2.0/static/js/main.9d8fb95a.chunk.js.map",
     "runtime-main.js": "/Pc_Express_2.0/static/js/runtime-main.b327b221.js",
     "runtime-main.js.map": "/Pc_Express_2.0/static/js/runtime-main.b327b221.js.map",
-    "static/js/2.5caff5a6.chunk.js": "/Pc_Express_2.0/static/js/2.5caff5a6.chunk.js",
-    "static/js/2.5caff5a6.chunk.js.map": "/Pc_Express_2.0/static/js/2.5caff5a6.chunk.js.map",
+    "static/js/2.c0299d4c.chunk.js": "/Pc_Express_2.0/static/js/2.c0299d4c.chunk.js",
+    "static/js/2.c0299d4c.chunk.js.map": "/Pc_Express_2.0/static/js/2.c0299d4c.chunk.js.map",
     "index.html": "/Pc_Express_2.0/index.html",
-    "static/css/main.0bcb2873.chunk.css.map": "/Pc_Express_2.0/static/css/main.0bcb2873.chunk.css.map",
-    "static/js/2.5caff5a6.chunk.js.LICENSE.txt": "/Pc_Express_2.0/static/js/2.5caff5a6.chunk.js.LICENSE.txt",
+    "static/css/main.5b6dfd5d.chunk.css.map": "/Pc_Express_2.0/static/css/main.5b6dfd5d.chunk.css.map",
+    "static/js/2.c0299d4c.chunk.js.LICENSE.txt": "/Pc_Express_2.0/static/js/2.c0299d4c.chunk.js.LICENSE.txt",
     "static/media/akali.cd62b251.jpg": "/Pc_Express_2.0/static/media/akali.cd62b251.jpg",
     "static/media/aboutUs.css": "/Pc_Express_2.0/static/media/akaliSmooth.ace4c0cf.jpg",
     "static/media/cod.a3575b1d.jpg": "/Pc_Express_2.0/static/media/cod.a3575b1d.jpg",
     "static/media/games-image.a6f97ec2.png": "/Pc_Express_2.0/static/media/games-image.a6f97ec2.png",
     "static/media/horizonZero.20ff08ee.jpg": "/Pc_Express_2.0/static/media/horizonZero.20ff08ee.jpg",
-    "static/media/styles.css": "/Pc_Express_2.0/static/media/horizonZeroSmooth.af8e5fca.jpg",
+    "static/media/aboutDevs.css": "/Pc_Express_2.0/static/media/horizonZeroSmooth.af8e5fca.jpg",
     "static/media/no mans sky.f31c4be3.png": "/Pc_Express_2.0/static/media/no mans sky.f31c4be3.png",
     "static/media/Register.css": "/Pc_Express_2.0/static/media/wallpeaper.745d9597.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.b327b221.js",
-    "static/js/2.5caff5a6.chunk.js",
-    "static/css/main.0bcb2873.chunk.css",
-    "static/js/main.40420b2d.chunk.js"
+    "static/js/2.c0299d4c.chunk.js",
+    "static/css/main.5b6dfd5d.chunk.css",
+    "static/js/main.9d8fb95a.chunk.js"
   ]
 }
