@@ -9,6 +9,12 @@
   background-color: rgba(0, 0, 0, 0.349);
   border-radius: 15px;
   border: 2px solid white;
+  overflow-y: scroll;
+
+  overflow-x: hidden;
+}
+.entryContainer::-webkit-scrollbar {
+  width: 0px;
 }
 
 .entryContainer a {

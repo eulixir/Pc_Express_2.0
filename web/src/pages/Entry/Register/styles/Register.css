@@ -87,11 +87,6 @@
   .registerLinks {
     width: 80vw;
   }
-  .registerInputs input[type='password'],
-  .registerInputs input[type='email'],
-  .registerInputs input[type='submit'] {
-    width: 60vw;
-  }
 }
 
 @media (min-width: 700px) {
