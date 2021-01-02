@@ -9,7 +9,7 @@ import { ImEye, ImFlag } from 'react-icons/im';
 import { FaHandshake } from 'react-icons/fa';
 import gamesImage from '../../assets/games-image.png';
 
-export default function aboutUs() {
+export default function AboutUs() {
   return (
     <div className="landingBackground">
       <div className="backgroundSmooth">

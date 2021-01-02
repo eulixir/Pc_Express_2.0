@@ -92,14 +92,9 @@ const Navbar = () => {
                 <Link to="/aboutUs" className="dropdown-item" id="navItem">
                   About Us
                 </Link>
-                <a
-                  className="dropdown-item"
-                  onClick={underCuntruction}
-                  id="navItem"
-                  href="#"
-                >
+                <Link to="/aboutDevs" className="dropdown-item" id="navItem">
                   About Devs
-                </a>
+                </Link>
               </div>
             </li>
             <li className="nav-item">

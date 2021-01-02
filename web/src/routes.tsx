@@ -8,7 +8,8 @@ import Login from './pages/Entry/Login';
 import ForgotPassword from './pages/Entry/ForgotPassword';
 import HaveCode from './pages/Entry/HaveCode';
 import Register from './pages/Entry/Register';
-import aboutUs from './pages/aboutUs';
+import AboutUs from './pages/aboutUs';
+import AboutDevs from './pages/aboutDevs';
 
 function Routes() {
   return (
@@ -20,7 +21,8 @@ function Routes() {
       <Route path="/Entry/HaveCode" exact component={HaveCode} />
       <Route path="/Entry/Register" exact component={Register} />
 
-      <Route path="/aboutUs" exact component={aboutUs} />
+      <Route path="/aboutUs" exact component={AboutUs} />
+      <Route path="/aboutDevs" exact component={AboutDevs} />
     </BrowserRouter>
   );
 }

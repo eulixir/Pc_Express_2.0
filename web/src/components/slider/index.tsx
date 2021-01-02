@@ -6,7 +6,6 @@ import akali from '../../assets/akali.jpg';
 import './styles/slider.css';
 import {
   MDBCarousel,
-  MDBCarouselCaption,
   MDBCarouselInner,
   MDBCarouselItem,
   MDBView,
