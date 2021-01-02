@@ -11,8 +11,8 @@ import gamesImage from '../../assets/games-image.png';
 
 export default function AboutUs() {
   return (
-    <div className="landingBackground">
-      <div className="backgroundSmooth">
+    <div className="aboutUsBackground">
+      <div className="aboutUsSmooth">
         <Navbar />
         <div className="aboutUsHeader">
           <div className="aboutUsHeaderTextContainer">

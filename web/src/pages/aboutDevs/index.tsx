@@ -1,10 +1,11 @@
 import React from 'react';
 import Navbar from '../../components/navbar/index';
+import './styles/styles.css';
 
 export default function AboutDevs() {
   return (
-    <div className="landingBackground">
-      <div className="backgroundSmooth">
+    <div className="aboutDevsBackground">
+      <div className="aboutDevsSmooth">
         <Navbar />
       </div>
     </div>

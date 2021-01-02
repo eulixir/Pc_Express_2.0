@@ -1,0 +1,16 @@
+.aboutDevsBackground {
+  background-image: url(../../../assets/horizonZeroSmooth.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-attachment: fixed;
+}
+.aboutDevsSmooth {
+  width: 100vw;
+  height: 100vh;
+}
