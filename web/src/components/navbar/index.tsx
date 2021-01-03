@@ -98,9 +98,9 @@ const Navbar = () => {
               </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#" onClick={underCuntruction}>
+              <Link className="nav-link" to="/contact">
                 <span>Contact</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#" onClick={underCuntruction}>

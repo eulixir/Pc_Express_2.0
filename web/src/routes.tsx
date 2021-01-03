@@ -10,6 +10,7 @@ import HaveCode from './pages/Entry/HaveCode';
 import Register from './pages/Entry/Register';
 import AboutUs from './pages/aboutUs';
 import AboutDevs from './pages/aboutDevs';
+import Contact from './pages/contact';
 
 function Routes() {
   return (
@@ -23,6 +24,7 @@ function Routes() {
 
       <Route path="/aboutUs" exact component={AboutUs} />
       <Route path="/aboutDevs" exact component={AboutDevs} />
+      <Route path="/contact" exact component={Contact} />
     </BrowserRouter>
   );
 }

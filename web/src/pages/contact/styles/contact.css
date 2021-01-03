@@ -1,0 +1,21 @@
+.contactContainer {
+  background-image: url(../../../assets/JettSmooth.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.contactSmooth {
+  width: 100vw;
+  height: 100vh;
+}
+.contactFormContainer {
+  width: 100vw;
+  height: 87vh;
+}
