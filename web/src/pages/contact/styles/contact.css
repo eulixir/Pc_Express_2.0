@@ -42,12 +42,17 @@
 }
 
 .contactFormContainerOne {
+  background: red;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
 }
 .contactFormContainerTwo {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,35 +135,6 @@
   color: black;
 }
 
-@media (min-width: 600px) {
-  .registerLinks {
-    width: 80vw;
-  }
-}
-
-@media (min-width: 700px) {
-  .registerLinks {
-    width: 60vw;
-  }
-
-  .contactInput input[type='email'],
-  .contactInput input[type='submit'],
-  .contactInput input[type='text'] {
-    width: 40vw;
-  }
-}
-
-@media (min-width: 1000px) {
-  .registerLinks {
-    width: 40vw;
-  }
-
-  .contactInput input[type='email'],
-  .contactInput input[type='submit'],
-  .contactInput input[type='text'] {
-    width: 40vw;
-  }
-}
 .contactInputFormContainer p {
   display: flex;
   justify-content: center;
@@ -184,4 +160,20 @@ textarea::placeholder {
 
 textarea:focus::placeholder {
   opacity: 40%;
+}
+@media (max-width: 700px) {
+  .contactFormContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .contactFormContainerOne {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
 }
