@@ -10,6 +10,24 @@
   background-position: center;
   background-attachment: fixed;
 }
+.contactInputFormContainer {
+  width: 45%;
+  height: 80vh;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.349);
+  border-radius: 15px;
+  border: 2px solid white;
+  overflow-y: scroll;
+
+  overflow-x: hidden;
+}
+.contactInputFormContainer::-webkit-scrollbar {
+  width: 0px;
+}
 
 .contactSmooth {
   width: 100vw;
@@ -141,6 +159,11 @@
     width: 40vw;
   }
 }
+.contactInputFormContainer p {
+  display: flex;
+  justify-content: center;
+  font: 700 1.6rem Roboto;
+}
 textarea {
   width: 100%;
   background: transparent;
@@ -152,6 +175,7 @@ textarea {
   padding: 10px;
   font: 700 1rem Roboto;
   resize: vertical;
+  margin-bottom: 50px;
 }
 textarea::placeholder {
   color: white;
