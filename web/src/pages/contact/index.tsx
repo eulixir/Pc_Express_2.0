@@ -12,7 +12,7 @@ export default function Contact() {
           <div className="contactFormContainerOne">ds</div>
           <div className="contactFormContainerTwo">
             <div className="contactInputFormContainer">
-              <form className="contactInput">
+              <form className="registerInputs">
                 <p>Contact us</p>
                 <input
                   required
