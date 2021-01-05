@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Pc_Express_2.0/static/css/main.fb9f5c1c.chunk.css",
-    "main.js": "/Pc_Express_2.0/static/js/main.240729cf.chunk.js",
-    "main.js.map": "/Pc_Express_2.0/static/js/main.240729cf.chunk.js.map",
+    "main.css": "/Pc_Express_2.0/static/css/main.1b0b551d.chunk.css",
+    "main.js": "/Pc_Express_2.0/static/js/main.346dcb33.chunk.js",
+    "main.js.map": "/Pc_Express_2.0/static/js/main.346dcb33.chunk.js.map",
     "runtime-main.js": "/Pc_Express_2.0/static/js/runtime-main.b327b221.js",
     "runtime-main.js.map": "/Pc_Express_2.0/static/js/runtime-main.b327b221.js.map",
     "static/js/2.bfb867d5.chunk.js": "/Pc_Express_2.0/static/js/2.bfb867d5.chunk.js",
     "static/js/2.bfb867d5.chunk.js.map": "/Pc_Express_2.0/static/js/2.bfb867d5.chunk.js.map",
     "index.html": "/Pc_Express_2.0/index.html",
-    "static/css/main.fb9f5c1c.chunk.css.map": "/Pc_Express_2.0/static/css/main.fb9f5c1c.chunk.css.map",
+    "static/css/main.1b0b551d.chunk.css.map": "/Pc_Express_2.0/static/css/main.1b0b551d.chunk.css.map",
     "static/js/2.bfb867d5.chunk.js.LICENSE.txt": "/Pc_Express_2.0/static/js/2.bfb867d5.chunk.js.LICENSE.txt",
     "static/media/contact.css": "/Pc_Express_2.0/static/media/JettSmooth.8640362b.jpg",
     "static/media/akali.cd62b251.jpg": "/Pc_Express_2.0/static/media/akali.cd62b251.jpg",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.b327b221.js",
     "static/js/2.bfb867d5.chunk.js",
-    "static/css/main.fb9f5c1c.chunk.css",
-    "static/js/main.240729cf.chunk.js"
+    "static/css/main.1b0b551d.chunk.css",
+    "static/js/main.346dcb33.chunk.js"
   ]
 }
