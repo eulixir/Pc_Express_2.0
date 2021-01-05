@@ -15,6 +15,9 @@
   top: 100px;
   color: white;
 }
+.contactFormContainerOne {
+  font: 700 1.6rem Roboto;
+}
 
 .registerInputs {
   display: flex;

@@ -9,7 +9,9 @@ export default function Contact() {
       <div className="contactSmooth">
         <Navbar />
         <div className="contactFormContainer">
-          <div className="contactFormContainerOne">ds</div>
+          <div className="contactFormContainerOne">
+            <p>Send your message here</p>
+          </div>
           <div className="contactFormContainerTwo">
             <div className="contactInputFormContainer">
               <form className="registerInputs">
