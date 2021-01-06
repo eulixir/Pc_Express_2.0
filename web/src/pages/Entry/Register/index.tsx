@@ -16,6 +16,7 @@ function Register() {
   function handleCreateRegister(e: FormEvent) {
     e.preventDefault();
 
+    console.log(name);
     if (password === repeatPassword) {
       api
         .post('Entry/Register', {
