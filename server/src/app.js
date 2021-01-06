@@ -161,6 +161,38 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
   return response.json(emailValidate);
 });
 
+// Send Contact Form
+app.get('/contact', (request, response) => {
+  let { name, subject, email, phone, local, content } = request.params;
+  console.log(name);
+
+  let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
+    },
+  });
+
+  let mailOptions = {
+    from: 'noreply.pcexpress@gmail.com',
+    to: 'noreply.pcexpress@gmail.com',
+    cc: 'email',
+    subject: 'Contact Form',
+    html:
+      '<p>We heard that you lost your PcExpress password. Sorry about that!</p><p>But don’t worry! You can use the following code to reset your password</p>',
+  };
+
+  transporter.sendMail(mailOptions, (err, data) => {
+    if (err) {
+      console.log(err + 'send email fail');
+    }
+    console.log('Email send 🚀');
+  });
+
+  return response.json(emailValidate);
+});
+
 console.log('----------------------------------------------------------');
 console.log('|                   Backend Starting                     |');
 console.log('----------------------------------------------------------');
