@@ -62,7 +62,6 @@ app.post('/Entry/Register', async (request, response) => {
     encrypted = Buffer.concat([encrypted, cipher.final()]);
     return `${iv.toString('hex')}:${encrypted.toString('hex')}`;
   };
-  // console.log(password);
 
   const cryptoPassword = encrypt(password);
   password = cryptoPassword;
@@ -75,11 +74,11 @@ app.post('/Entry/Register', async (request, response) => {
       status: 'Ok',
       transaction: newUser,
     });
+    User.push(register);
   } catch ({ message }) {
     console.log(message);
     response.status(400).send({ error: message });
   }
-  User.push(register);
 });
 
 // Validate Email and Password
@@ -171,32 +170,36 @@ app.post('/contact', (request, response) => {
     phone,
     local,
     content,
-  } = request.query);
-  return response.json(name);
+  } = request.body);
+  console.log(formContent);
+  let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
+    },
+  });
 
-  // let transporter = nodemailer.createTransport({
-  //   service: 'gmail',
-  //   auth: {
-  //     user: process.env.EMAIL,
-  //     pass: process.env.PASSWORD,
-  //   },
-  // });
+  let mailOptions = {
+    from: 'noreply.pcexpress@gmail.com',
+    to: 'noreply.pcexpress@gmail.com',
+    cc: email,
+    subject: 'Contact Form',
+    html:
+      '<p>We heard that you lost your PcExpress password. Sorry about that!</p><p>But don’t worry! You can use the following code to reset your password</p>',
+  };
 
-  // let mailOptions = {
-  //   from: 'noreply.pcexpress@gmail.com',
-  //   to: 'noreply.pcexpress@gmail.com',
-  //   cc: 'email',
-  //   subject: 'Contact Form',
-  //   html:
-  //     '<p>We heard that you lost your PcExpress password. Sorry about that!</p><p>But don’t worry! You can use the following code to reset your password</p>',
-  // };
-
-  // transporter.sendMail(mailOptions, (err, data) => {
-  //   if (err) {
-  //     console.log(err + 'send email fail');
-  //   }
-  //   console.log('Email send 🚀');
-  // });
+  try {
+    transporter.sendMail(mailOptions, (err, data) => {
+      if (err) {
+        console.log(err + 'send email fail');
+      }
+      console.log('Form send 🚀');
+      response.send({
+        status: 'Ok',
+      });
+    });
+  } catch {}
 });
 
 console.log('----------------------------------------------------------');

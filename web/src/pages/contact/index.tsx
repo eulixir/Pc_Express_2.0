@@ -16,7 +16,7 @@ export default function Contact() {
 
   function handleSendContent(e: FormEvent) {
     e.preventDefault();
-    if (name !== null) {
+    if (name) {
       api
         .post('/contact', {
           name,
@@ -28,10 +28,8 @@ export default function Contact() {
         })
 
         .then(() => {
-          console.log('sucess');
-          alert('Submitted form');
-
-          // history.push('/');
+          alert('Form send');
+          history.push('/');
         })
         .catch(() => {
           alert('Sending error, try later');
