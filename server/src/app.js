@@ -154,8 +154,9 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
   transporter.sendMail(mailOptions, (err, data) => {
     if (err) {
       console.log(err + 'send email fail');
+    } else {
+      console.log('Email send 🚀');
     }
-    console.log('Email send 🚀');
   });
 
   return response.json(emailValidate);
@@ -171,7 +172,7 @@ app.post('/contact', (request, response) => {
     local,
     content,
   } = request.body);
-  console.log(formContent);
+
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -181,10 +182,10 @@ app.post('/contact', (request, response) => {
   });
 
   let mailOptions = {
-    from: 'noreply.pcexpress@gmail.com',
-    to: 'noreply.pcexpress@gmail.com',
+    from: process.env.EMAIL,
+    to: process.env.EMAIL,
     cc: email,
-    subject: 'Contact Form',
+    subject: subject,
     html:
       '<p>We heard that you lost your PcExpress password. Sorry about that!</p><p>But don’t worry! You can use the following code to reset your password</p>',
   };
@@ -192,12 +193,13 @@ app.post('/contact', (request, response) => {
   try {
     transporter.sendMail(mailOptions, (err, data) => {
       if (err) {
-        console.log(err + 'send email fail');
+        console.log(err + ' ' + 'send email fail');
+      } else {
+        console.log('Form send 🚀');
+        response.send({
+          status: 'Ok',
+        });
       }
-      console.log('Form send 🚀');
-      response.send({
-        status: 'Ok',
-      });
     });
   } catch {}
 });
