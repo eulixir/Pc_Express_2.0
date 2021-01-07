@@ -1,12 +1,12 @@
 import React from 'react';
-import './styles/suportIcon.css';
+import './styles/goTop.css';
 import { FaUsers } from 'react-icons/fa';
 
-export default function SuportIcon() {
+export default function GoTopIcon() {
   return (
-    <div className="suportContainer">
-      <div className="suportIcon">
-        <FaUsers size={32} color={'#fff'} />
+    <div className="goTopContainer">
+      <div className="goTopIcon">
+        <FaUsers size={32} />
       </div>
     </div>
   );

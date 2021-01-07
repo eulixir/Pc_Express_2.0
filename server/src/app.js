@@ -164,14 +164,7 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
 
 // Send Contact Form
 app.post('/contact', (request, response) => {
-  const formContent = ({
-    name,
-    subject,
-    email,
-    phone,
-    local,
-    content,
-  } = request.body);
+  const formContent = ({ name, subject, email, phone, content } = request.body);
 
   let transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -186,8 +179,7 @@ app.post('/contact', (request, response) => {
     to: process.env.EMAIL,
     cc: email,
     subject: subject,
-    html:
-      '<p>We heard that you lost your PcExpress password. Sorry about that!</p><p>But don’t worry! You can use the following code to reset your password</p>',
+    html: content,
   };
 
   try {
