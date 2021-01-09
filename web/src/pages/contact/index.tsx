@@ -11,7 +11,6 @@ export default function Contact() {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [phone, setPhone] = useState('');
-  const [local, setLocal] = useState('');
   const [content, setContent] = useState('');
 
   function handleSendContent(e: FormEvent) {
@@ -23,7 +22,7 @@ export default function Contact() {
           subject,
           email,
           phone,
-          local,
+
           content,
         })
 
@@ -82,14 +81,6 @@ export default function Contact() {
                   onChange={(e) => [setPhone(e.target.value)]}
                   id="contactInput"
                   placeholder="Phone"
-                />
-                <input
-                  required
-                  type="text"
-                  value={local}
-                  onChange={(e) => [setLocal(e.target.value)]}
-                  id="contactInput"
-                  placeholder="Local"
                 />
                 <textarea
                   required
