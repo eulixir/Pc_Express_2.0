@@ -1,8 +1,4 @@
-<<<<<<< HEAD:web/src/components/topIcon/styles/topIcon.css
 .topContainer {
-=======
-.goTopContainer {
->>>>>>> e94e7fd2cfdeebfdf2ca41e78de863efe967c9c4:web/src/components/topIcon/styles/goTop.css
   position: fixed;
   width: 70px;
   height: 70px;
@@ -19,12 +15,6 @@
   overflow: visible;
 }
 
-<<<<<<< HEAD:web/src/components/topIcon/styles/topIcon.css
 .topContainer:hover {
   opacity: 70%;
-=======
-.goTopContainer:hover {
-  opacity: 70%;
-  cursor: pointer;
->>>>>>> e94e7fd2cfdeebfdf2ca41e78de863efe967c9c4:web/src/components/topIcon/styles/goTop.css
 }
