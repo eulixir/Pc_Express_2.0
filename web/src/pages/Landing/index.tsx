@@ -3,14 +3,14 @@ import Navbar from '../../components/navbar/index';
 import './styles/Landing.css';
 
 import Slider from '../../components/slider';
-import SuportIcon from '../../components/suportIcon';
+import TopIcon from '../../components/topIcon';
 import HelpToAssembly from '../../components/helpToAssembly';
 import Footer from '../../components/footer';
 
 export default function Landing() {
   return (
     <div className="landingBackground area">
-      <SuportIcon />
+      <TopIcon />
       <div className="backgroundSmooth">
         <div className="landingHeader">
           <Navbar />
