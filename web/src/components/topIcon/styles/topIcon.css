@@ -1,4 +1,4 @@
-.topContainer {
+.goTopContainer {
   position: fixed;
   width: 70px;
   height: 70px;
@@ -15,6 +15,13 @@
   overflow: visible;
 }
 
-.topContainer:hover {
+.goTopContainer:hover {
   opacity: 70%;
+}
+
+@media (max-width: 700px) {
+  .goTopContainer {
+    width: 60px;
+    height: 60px;
+  }
 }

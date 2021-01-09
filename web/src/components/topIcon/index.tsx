@@ -4,8 +4,8 @@ import { MdKeyboardArrowUp } from 'react-icons/md';
 
 export default function topIcon() {
   return (
-    <div className="topContainer">
-      <div className="topIcon">
+    <div className="goTopContainer">
+      <div className="goTopIcon">
         <MdKeyboardArrowUp size={40} />
       </div>
     </div>
