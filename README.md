@@ -10,14 +10,15 @@ A ideia inicial do projeto é aperfeiçoar meus aprendizados em React.Js e Node.
 Já passou pela experiência de precisar montar um computador e não ter ideia de quais peças iria colocar nele? Seja por exemplo um Core i5 ou um Ryzen 3600x, a ideia desta aplicação vai ser uma inteligência artificial que indicará as melhores peças para montar o seu setup.
 <br>
 <br>
-O site terá 4 modalidades, o primeiro é um espaço para computadores para usos domésticos que não exigam de muito processamento, o segundo irá ser reservado para gamers, aqueles que tem um limite de orçamento (ou não), o terceiro é voltado para aqueles que procuram para trabalho ou pesquisas. e o quarto por fim, será notebooks, com as mesmas secções acima.
-
+O site terá 4 modalidades, o primeiro é um espaço para computadores para usos domésticos que não exigam de muito processamento, o segundo irá ser reservado para gamers, aqueles que tem um limite de orçamento (ou não), o terceiro é voltado para aqueles que procuram para trabalho ou pesquisas. e o quarto por fim, será notebooks, com as mesmas secções acima.<br>
+<br>
+<img src="gitDocs/landing-page.png" alt="" srcset="" style="box-shadow: 2px 2px 10px black">
 </div>
 <br>
 <br>
 <h1> Como instalar o Front end 💻</h1> 
 <h2>Download do Projeto</h2>
-    <img src="gitDocs/clone_download.png" alt="" srcset="" style="box-shadow: 2px 2px 10px black">
+    <img src=./gitDocs/git-clone.png alt="" srcset="" style="box-shadow: 2px 2px 10px black">
     <br><br>
     <p>Faça o clone do Repositorio em sua maquina com o comando <code>git clone https://github.com/joaopealves/Pc_Express_2.0.git</code></p>
 <br><br>
@@ -25,9 +26,8 @@ O site terá 4 modalidades, o primeiro é um espaço para computadores para usos
 <p style="font-size:15px;">É necessário instalar a <span style="color: yellow; ">node_modules ! </span><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/OOjs_UI_icon_alert-yellow.svg" width="13px"/></p>
 <hr>
 
-<img src=./gitDocs/print1.jpg/>
-
 Use <code>npm init -y</code> caso esteja usando o npm, se optar por utilizar o yarn utilize o comando <code>yarn.</code>
+s
 
 <p>após a instalação do node_modules basta digitar pelo terminal:</p>
 
