@@ -12,7 +12,7 @@ Já passou pela experiência de precisar montar um computador e não ter ideia d
 <br>
 O site terá 4 modalidades, o primeiro é um espaço para computadores para usos domésticos que não exigam de muito processamento, o segundo irá ser reservado para gamers, aqueles que tem um limite de orçamento (ou não), o terceiro é voltado para aqueles que procuram para trabalho ou pesquisas. e o quarto por fim, será notebooks, com as mesmas secções acima.<br>
 <br>
-<img src="gitDocs/landing-page.png" alt="" srcset="" style="box-shadow: 2px 2px 10px black">
+<img src="https://raw.githubusercontent.com/joaopealves/Pc_Express_2.0/main/gitDocs/landing-page.PNG" alt="" srcset="" style="box-shadow: 2px 2px 10px black">
 </div>
 <br>
 <br>
