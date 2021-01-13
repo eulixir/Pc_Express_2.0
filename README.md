@@ -46,7 +46,7 @@ dentro de:
 <br>
 <h1> Como instalar o Back end 🖥</h1> 
 <h2>Download do Projeto</h2>
-    <img src="gitDocs/clone_download.png" alt="" srcset="" style="box-shadow: 2px 2px 10px black">
+    <img src="ghttps://raw.githubusercontent.com/joaopealves/Pc_Express_2.0/main/gitDocs/git-clone.PNG" alt="" srcset="" style="box-shadow: 2px 2px 10px black">
     <br><br>
     <p>Faça o clone do Repositorio em sua maquina com o comando <code>git clone https://github.com/joaopealves/Pc_Express_2.0.git</code></p>
 <br><br>
