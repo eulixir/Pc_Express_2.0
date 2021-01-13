@@ -18,7 +18,7 @@ O site terá 4 modalidades, o primeiro é um espaço para computadores para usos
 <br>
 <h1> Como instalar o Front end 💻</h1> 
 <h2>Download do Projeto</h2>
-    <img src=./gitDocs/git-clone.png alt="" srcset="" style="box-shadow: 2px 2px 10px black">
+    <img src="https://raw.githubusercontent.com/joaopealves/Pc_Express_2.0/main/gitDocs/git-clone.PNG" alt="" srcset="" style="box-shadow: 2px 2px 10px black">
     <br><br>
     <p>Faça o clone do Repositorio em sua maquina com o comando <code>git clone https://github.com/joaopealves/Pc_Express_2.0.git</code></p>
 <br><br>
@@ -46,7 +46,7 @@ dentro de:
 <br>
 <h1> Como instalar o Back end 🖥</h1> 
 <h2>Download do Projeto</h2>
-    <img src="ghttps://raw.githubusercontent.com/joaopealves/Pc_Express_2.0/main/gitDocs/git-clone.PNG" alt="" srcset="" style="box-shadow: 2px 2px 10px black">
+    <img src="https://raw.githubusercontent.com/joaopealves/Pc_Express_2.0/main/gitDocs/git-clone.PNG" alt="" srcset="" style="box-shadow: 2px 2px 10px black">
     <br><br>
     <p>Faça o clone do Repositorio em sua maquina com o comando <code>git clone https://github.com/joaopealves/Pc_Express_2.0.git</code></p>
 <br><br>
