@@ -38,6 +38,15 @@ app.get('/Entry/Login', async (request, response) => {
   try {
     const getUsers = await service.getUser(email);
 
+    // Filter if email exists
+    getUsers.filter((data) => {
+      if (data.email.indexOf('jotaldmeida007@hotmail.com') !== -1) {
+        console.log(data.email);
+      } else {
+        console.log('error');
+      }
+    });
+
     response.send({
       users: getUsers,
     });
