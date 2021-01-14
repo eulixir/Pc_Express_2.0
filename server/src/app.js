@@ -34,19 +34,9 @@ app.use('/Entry/:email', validateEmail);
 app.get('/Entry/Login', async (request, response) => {
   const { email } = request.query;
   const user = email ? User.filter((User) => User.email.includes(email)) : User;
-
+  console.log(user);
   try {
     const getUsers = await service.getUser(email);
-
-    // Filter if email exists
-    getUsers.filter((data) => {
-      if (data.email.indexOf('jotaldmeida007@hotmail.com') !== -1) {
-        console.log(data.email);
-      } else {
-        console.log('error');
-      }
-    });
-
     response.send({
       users: getUsers,
     });
@@ -58,32 +48,53 @@ app.get('/Entry/Login', async (request, response) => {
 
 // Post User
 app.post('/Entry/Register', async (request, response) => {
+  let emailExits = true;
   let { name, email, password } = request.body;
-  // 1º step See if the email is already registered
-  const encrypt = (value) => {
-    const iv = Buffer.from(crypto.randomBytes(16));
-    const cipher = crypto.createCipheriv(
-      'aes-256-cbc',
-      Buffer.from(secret),
-      iv
-    );
-    let encrypted = cipher.update(value);
-    encrypted = Buffer.concat([encrypted, cipher.final()]);
-    return `${iv.toString('hex')}:${encrypted.toString('hex')}`;
-  };
-
-  const cryptoPassword = encrypt(password);
-  password = cryptoPassword;
-
-  //2º Step Try to insert in mongoDB
   try {
-    const register = { name, email, password };
-    const newUser = await service.postUser(register);
-    response.send({
-      status: 'Ok',
-      transaction: newUser,
+    const getUsers = await service.getUser(email);
+
+    // 1º step See if the email is already registered
+    // Filter if email exists
+    getUsers.filter((data) => {
+      if (data.email.indexOf(user) == -1) {
+        console.log(user);
+        emailExits = true;
+        console.log('Email already registered');
+      } else {
+        console.log('tales gay');
+        const encrypt = (value) => {
+          const iv = Buffer.from(crypto.randomBytes(16));
+          const cipher = crypto.createCipheriv(
+            'aes-256-cbc',
+            Buffer.from(secret),
+            iv
+          );
+          let encrypted = cipher.update(value);
+          encrypted = Buffer.concat([encrypted, cipher.final()]);
+          return `${iv.toString('hex')}:${encrypted.toString('hex')}`;
+        };
+
+        const cryptoPassword = encrypt(password);
+        password = cryptoPassword;
+
+        //2º Step Try to insert in mongoDB
+        try {
+          const register = { name, email, password };
+          const newUser = service.postUser(register);
+          response.send({
+            status: 'Ok',
+            transaction: newUser,
+          });
+          User.push(register);
+        } catch ({ message }) {
+          console.log(message);
+          response.status(400).send({ error: message });
+        }
+      }
     });
-    User.push(register);
+    response.send({
+      users: getUsers,
+    });
   } catch ({ message }) {
     console.log(message);
     response.status(400).send({ error: message });
