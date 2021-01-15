@@ -99,6 +99,37 @@ app.post('/Entry/Register', async (request, response) => {
     console.log(message);
     response.status(400).send({ error: message });
   }
+  // 1º step See if the email is already registered
+  async function emailExists() {
+    const encrypt = (value) => {
+      const iv = Buffer.from(crypto.randomBytes(16));
+      const cipher = crypto.createCipheriv(
+        'aes-256-cbc',
+        Buffer.from(secret),
+        iv
+      );
+      let encrypted = cipher.update(value);
+      encrypted = Buffer.concat([encrypted, cipher.final()]);
+      return `${iv.toString('hex')}:${encrypted.toString('hex')}`;
+    };
+
+    const cryptoPassword = encrypt(password);
+    password = cryptoPassword;
+
+    //2º Step Try to insert in mongoDB
+    try {
+      const register = { name, email, password };
+      const newUser = await service.postUser(register);
+      response.send({
+        status: 'Ok',
+        transaction: newUser,
+      });
+      User.push(register);
+    } catch ({ message }) {
+      console.log(message);
+      response.status(400).send({ error: message });
+    }
+  }
 });
 
 // Validate Email and Password
