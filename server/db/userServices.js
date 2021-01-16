@@ -3,7 +3,7 @@ const UserModel = require('./userModel');
 const ObjectId = mongoose.Types.ObjectId;
 
 async function getUser(email) {
-  const users = await UserModel.find({ user: email });
+  const users = await UserModel.find({ email: email });
   return users;
 }
 
