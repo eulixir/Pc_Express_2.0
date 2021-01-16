@@ -49,40 +49,26 @@ app.get('/Entry/Login', async (request, response) => {
 // Post User
 app.post('/Entry/Register', async (request, response) => {
   let bodyTemporario = (({ email }) => ({ email }))(request.body);
-  // let { email } = request.body;
-
-  // const { email } = request.query;
-
+  let { password, name } = request.body;
   const { email } = bodyTemporario;
-
-  // const { email, password, name } = request.body;
-
-  // const user = email ? User.filter((User) => User.email.includes(email)) : User;
 
   try {
     const getUsers = await service.getUser(email);
-    response.send({
-      users: getUsers,
-    });
 
-    // getUsers.filter((data) => {
-    //   console.log(data.email);
-    // });
-    const { email: email2 } = getUsers;
-    console.log(email2);
-
-    if (email2 !== []) {
-      console.log('Email already exist');
+    if (getUsers.length === 0) {
+      emailNotExists();
     } else {
-      console.log('Email does not exist');
-      // emailExists();
+      console.log('Email already registered');
+      response.send({
+        error: 'email already registered',
+      });
     }
   } catch ({ message }) {
     console.log(message);
-    response.status(400).send({ error: message });
+    // response.status(400).send({ error: message });
   }
   // 1º step See if the email is already registered
-  async function emailExists() {
+  async function emailNotExists() {
     const encrypt = (value) => {
       const iv = Buffer.from(crypto.randomBytes(16));
       const cipher = crypto.createCipheriv(
