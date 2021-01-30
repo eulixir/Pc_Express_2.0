@@ -16,7 +16,6 @@ function Register() {
   function handleCreateRegister(e: FormEvent) {
     e.preventDefault();
 
-    console.log(name);
     if (password === repeatPassword) {
       api
         .post('Entry/Register', {
@@ -27,12 +26,11 @@ function Register() {
         })
 
         .then(() => {
-          alert('cadastro realizado com sucesso');
-
-          history.push('/Entry/Login');
+          alert('Cadastro realizado com sucesso');
+          // history.push('/Entry/Login');
         })
         .catch(() => {
-          ('Erro no cadastro!');
+          alert('Email já registrado');
         });
     } else {
       alert('As senhas não coincidem');

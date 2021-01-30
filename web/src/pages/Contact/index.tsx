@@ -22,7 +22,6 @@ export default function Contact() {
           subject,
           email,
           phone,
-
           content,
         })
 

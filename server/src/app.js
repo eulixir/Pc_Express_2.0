@@ -43,7 +43,6 @@ app.get('/Entry/Login', async (request, response) => {
     console.log(message);
     response.status(400).send({ error: message });
   }
-  // userRequest = email;
 });
 
 // Post User
@@ -59,8 +58,8 @@ app.post('/Entry/Register', async (request, response) => {
       emailNotExists();
     } else {
       console.log('Email already registered');
-      response.send({
-        error: 'email already registered',
+      return response.status(403).send({
+        error: 'Email already registered',
       });
     }
   } catch ({ message }) {
@@ -87,7 +86,7 @@ app.post('/Entry/Register', async (request, response) => {
       const register = { name, email, password };
       const newUser = await service.postUser(register);
       response.send({
-        status: 'Ok',
+        status: 200,
         transaction: newUser,
       });
       User.push(register);
