@@ -10,15 +10,10 @@ export default function HelpToAssembly() {
         <BsController size="40" color={' rgb(54, 179, 16)'} />
         <span>Build your gamer monster</span>
       </div>
-
-      <span>/</span>
-
       <div className="iconsAssemblyContainer RiHome2Line">
         <RiHome2Line size="40" color={'rgb(230, 233, 29)'} />
-        <span>Build your home pc</span>
+        <span>Build home pc</span>
       </div>
-
-      <span>/</span>
 
       <div className="iconsAssemblyContainer BsGear">
         <BsGear size="40" color={'rgb(233, 29, 223)'} />

@@ -27,7 +27,7 @@ function Register() {
 
         .then(() => {
           alert('Cadastro realizado com sucesso');
-          // history.push('/Entry/Login');
+          history.push('/Entry/Login');
         })
         .catch(() => {
           alert('Email já registrado');
