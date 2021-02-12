@@ -18,13 +18,17 @@
 }
 
 .userLogo {
+  background-color: white;
+  width: 70px;
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   right: 150px;
   align-items: center;
   transition: 0.8s;
-}
-.userLogo:hover {
-  opacity: 70%;
 }
 
 #navItem {

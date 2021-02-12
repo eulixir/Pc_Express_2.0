@@ -1,6 +1,7 @@
 import React from 'react';
 import { IoIosMenu } from 'react-icons/io';
 import { RiUserFill } from 'react-icons/ri';
+import { BiLogInCircle } from 'react-icons/bi';
 
 import './styles/navbar.css';
 import { Link } from 'react-router-dom';
@@ -110,6 +111,7 @@ const Navbar = () => {
           </ul>
           <div className="userLogo">
             <Link to="/Entry/Login">
+              <BiLogInCircle size={25} color={'#294CCA'} />
               <RiUserFill size={25} color={'#294CCA'} />
             </Link>
           </div>

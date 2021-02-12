@@ -4,6 +4,10 @@
 
 A ideia inicial do projeto é aperfeiçoar meus aprendizados em React.Js e Node.Js, aplicando-os em um website responsivo.
 
+## GitHub pages deploy
+
+        https://joaopealves.github.io/Pc_Express_2.0/
+
 ## Sobre o nosso projeto
 
 <div align="justify">
@@ -16,7 +20,7 @@ O site terá 4 modalidades, o primeiro é um espaço para computadores para usos
 </div>
 <br>
 <br>
-<h1> Como instalar o Front end 💻</h1> 
+<h1> Como instalar o Front end 💻</h1>
 <h2>Download do Projeto</h2>
     <img src="https://raw.githubusercontent.com/joaopealves/Pc_Express_2.0/main/gitDocs/git-clone.PNG" alt="" srcset="" style="box-shadow: 2px 2px 10px black">
     <br><br>
@@ -44,7 +48,7 @@ dentro de:
 <br>
 <br>
 <br>
-<h1> Como instalar o Back end 🖥</h1> 
+<h1> Como instalar o Back end 🖥</h1>
 <h2>Download do Projeto</h2>
     <img src="https://raw.githubusercontent.com/joaopealves/Pc_Express_2.0/main/gitDocs/git-clone.PNG" alt="" srcset="" style="box-shadow: 2px 2px 10px black">
     <br><br>
