@@ -1,0 +1,93 @@
+.navbar button {
+  border: none;
+}
+.pcExpress-logo {
+  font: 400 1.4rem 'Charmonman';
+}
+#expressSpan {
+  color: rgb(59, 138, 230);
+}
+
+.navbar button:focus {
+  border: none;
+  outline: none;
+}
+
+.bg {
+  background-color: rgba(0, 0, 0, 0.596);
+}
+
+.userLogo {
+  background-color: white;
+  width: 70px;
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 150px;
+  align-items: center;
+  transition: 0.8s;
+}
+
+#navItem {
+  font: 700 1rem 'Roboto';
+  color: rgb(99, 99, 99);
+  transition: 0.4s;
+}
+
+#navItem:hover {
+  background-color: rgb(212, 212, 212);
+  color: #000;
+}
+#navItem:focus {
+  background-color: rgba(255, 255, 255);
+}
+
+.nav-item span {
+  color: white;
+  margin-left: 40px;
+  transition: 0.1s;
+}
+.nav-item span:hover {
+  border: 2px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: rgb(226, 226, 226);
+}
+
+.navbar {
+  font: 700 1rem Roboto;
+}
+
+.dropdown-menu {
+  border: 0px solid rgba(0, 0, 0, 0.15) !important;
+  background-color: #fafafa;
+}
+
+@media (max-width: 991px) {
+  .userLogo {
+    right: 50px;
+    top: 80px;
+  }
+}
+@media (min-width: 992px) {
+  .dropdown .dropdown-menu {
+    transition: all 0.5s;
+    overflow: hidden;
+    transform-origin: top center;
+    transform: scale(1, 0);
+    display: block;
+  }
+  .dropdown:hover .dropdown-menu {
+    transform: scale(1);
+  }
+  .dropdown .dropdown-menu .dropdown-item {
+    font-size: 14px;
+    padding: 9px 18px !important;
+    color: #000 !important;
+    text-transform: capitalize;
+  }
+}

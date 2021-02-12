@@ -2,7 +2,16 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const nodemailer = require('nodemailer');
+const service = require('../db/userServices');
+const crypto = require('crypto');
+var validator = require('validator');
+const takeRandomCode = require('../functions/randomCode');
+
+const userRequest = '';
+
 require('dotenv').config();
+
+const secret = process.env.SECRETCRYPTO;
 
 const User = [];
 app.use(cors());
@@ -21,40 +30,93 @@ function validateEmail(request, response, next) {
 
 app.use('/Entry/:email', validateEmail);
 
-app.get('/Entry/Login', (request, response) => {
+// get User
+app.get('/Entry/Login', async (request, response) => {
   const { email } = request.query;
-  const user = email ? User.filter((User) => User.email.includes(email)) : User;
-
-  console.log('----------------------------------------------------------');
-  console.log(user);
-  console.log('----------------------------------------------------------');
-  return response.json(user);
+  try {
+    const getUsers = await service.getUser(email);
+    response.send({
+      users: getUsers,
+    });
+    console.log(getUsers);
+  } catch ({ message }) {
+    console.log(message);
+    response.status(400).send({ error: message });
+  }
 });
 
-app.post('/Entry/Register', (request, response) => {
-  const { name, email, password } = request.body;
+// Post User
+app.post('/Entry/Register', async (request, response) => {
+  let bodyTemporario = (({ email }) => ({ email }))(request.body);
+  let { password, name } = request.body;
+  const { email } = bodyTemporario;
 
-  const register = { name, email, password };
+  try {
+    const getUsers = await service.getUser(email);
 
-  User.push(register);
-  console.log('----------------------------------------------------------');
-  console.log(register);
-  console.log('----------------------------------------------------------');
-  return response.json(register);
+    if (getUsers.length === 0) {
+      emailNotExists();
+    } else {
+      console.log('Email already registered');
+      return response.status(403).send({
+        error: 'Email already registered',
+      });
+    }
+  } catch ({ message }) {
+    console.log(message);
+    // response.status(400).send({ error: message });
+  }
+  // 1º step See if the email is already registered
+  async function emailNotExists() {
+    const encrypt = (value) => {
+      const iv = Buffer.from(crypto.randomBytes(16));
+      const cipher = crypto.createCipheriv(
+        'aes-256-cbc',
+        Buffer.from(secret),
+        iv
+      );
+      let encrypted = cipher.update(value);
+      encrypted = Buffer.concat([encrypted, cipher.final()]);
+      return `${iv.toString('hex')}:${encrypted.toString('hex')}`;
+    };
+    const cryptoPassword = encrypt(password);
+    password = cryptoPassword;
+    //2º Step Try to insert in mongoDB
+    try {
+      const register = { name, email, password };
+      const newUser = await service.postUser(register);
+      response.send({
+        status: 200,
+        transaction: newUser,
+      });
+      User.push(register);
+    } catch ({ message }) {
+      console.log(message);
+      response.status(400).send({ error: message });
+    }
+  }
 });
 
 // Validate Email and Password
-app.get('/Entry/Validate/:email/:password', (request, response) => {
-  const { email, name, password } = request.params;
-
+app.get('/Entry/Validate/:email/:password', async (request, response) => {
+  let { email, name, password } = request.params;
   const user = { name, email, password };
+
+  try {
+    const getUsers = await service.getUser(email);
+    console.log(email);
+    response.send({
+      users: getUsers,
+    });
+  } catch ({ message }) {
+    console.log(message);
+    response.status(400).send({ error: message });
+  }
 
   const findUserIndex = User.findIndex((user) => user.email === email);
   const findPasswordIndex = User.findIndex(
     (user) => user.password === password
   );
-
-  console.log(findPasswordIndex);
 
   if (findUserIndex === -1) {
     return response.status(400).json({ error: 'Email invalid' });
@@ -69,13 +131,9 @@ app.get('/Entry/Validate/:email/:password', (request, response) => {
     password: User[findUserIndex].password,
   };
   user[findUserIndex] = emailValidate;
-
-  console.log('----------------------------------------------------------');
-  console.log(emailValidate);
-  console.log('----------------------------------------------------------');
-  return response.json(emailValidate);
 });
 
+// Send Random Code
 app.get('/Entry/sendEmail/:email/', (request, response) => {
   const { email } = request.params;
 
@@ -92,18 +150,6 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
   };
   user[findUserIndex] = emailValidate;
 
-  function getRandomCode(length) {
-    var code = '';
-    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    var charactersLength = characters.length;
-    for (var i = 0; i < length; i++) {
-      code += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return code;
-  }
-
-  const randomCode = getRandomCode(5);
-
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -116,21 +162,58 @@ app.get('/Entry/sendEmail/:email/', (request, response) => {
     from: 'noreply.pcexpress@gmail.com',
     to: email,
     subject: 'Reset your password',
-    text: 'Your reset code is = ' + randomCode,
+    html:
+      '<p>We heard that you lost your PcExpress password. Sorry about that!</p><p>But don’t worry! You can use the following code to reset your password</p>' +
+      takeRandomCode,
   };
 
   transporter.sendMail(mailOptions, (err, data) => {
     if (err) {
       console.log(err + 'send email fail');
+    } else {
+      console.log('Email send 🚀');
     }
-    console.log('Email send 🚀');
   });
 
   return response.json(emailValidate);
 });
 
+// Send Contact Form
+app.post('/contact', (request, response) => {
+  const formContent = ({ name, subject, email, phone, content } = request.body);
+
+  let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
+    },
+  });
+
+  let mailOptions = {
+    from: process.env.EMAIL,
+    to: process.env.EMAIL,
+    cc: email,
+    subject: subject,
+    html: content,
+  };
+
+  try {
+    transporter.sendMail(mailOptions, (err, data) => {
+      if (err) {
+        console.log(err + ' ' + 'send email fail');
+      } else {
+        console.log('Form send 🚀');
+        response.send({
+          status: 'Ok',
+        });
+      }
+    });
+  } catch {}
+});
+
 console.log('----------------------------------------------------------');
-console.log('|                   Backend Started ✔                    |');
+console.log('|                   Backend Starting                     |');
 console.log('----------------------------------------------------------');
 
 module.exports = app;

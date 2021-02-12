@@ -27,28 +27,30 @@ export default function ForgotPassword() {
   return (
     <div className="background">
       <div className="forgotBackground">
-        <div className="entryContainer">
-          <div className="GoBackEntryIcon">
-            <Link to="/Entry/Login">
-              <BsArrowLeft color="white" size={50} />
-            </Link>
-          </div>
+        <div className="backgroundEntrySmooth">
+          <div className="entryContainer">
+            <div className="GoBackEntryIcon">
+              <Link to="/Entry/Login">
+                <BsArrowLeft color="white" size={50} />
+              </Link>
+            </div>
 
-          <p>Forgot Password?</p>
-          <h6>
-            Forgot password? does not matter! We will send a code in your email
-            !
-          </h6>
-          <form onSubmit={handleForgotPassword} className="forgotInputs">
-            <input
-              type="email"
-              placeholder="Your email registered"
-              value={email}
-              onChange={(e) => [setEmail(e.target.value)]}
-              required
-            />
-            <input type="submit" value="SEND CODE TO YOUR EMAIL" />
-          </form>
+            <p>Forgot Password?</p>
+            <h6>
+              Forgot password? does not matter! We will send a code in your
+              email !
+            </h6>
+            <form onSubmit={handleForgotPassword} className="forgotInputs">
+              <input
+                type="email"
+                placeholder="Your email registered"
+                value={email}
+                onChange={(e) => [setEmail(e.target.value)]}
+                required
+              />
+              <input type="submit" value="SEND CODE TO YOUR EMAIL" />
+            </form>
+          </div>
         </div>
       </div>
     </div>

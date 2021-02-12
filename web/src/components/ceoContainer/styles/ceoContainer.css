@@ -1,0 +1,76 @@
+#cardImg {
+  height: 240px;
+  border-radius: 50%;
+  width: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.cardImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(41, 76, 202);
+  background: linear-gradient(
+    180deg,
+    rgba(41, 76, 202, 1) 1%,
+    rgba(80, 111, 222, 1) 56%,
+    rgb(0, 0, 0) 57%,
+    rgb(255, 255, 255) 58%,
+    rgb(255, 255, 255) 98%
+  );
+}
+
+.ownerNameCard {
+  text-align: center;
+}
+
+.cardItens {
+  display: flex;
+  justify-content: space-between;
+}
+
+.SiGithub {
+  color: rgb(87, 87, 87);
+}
+.SiGithub:hover {
+  color: rgb(0, 0, 0);
+}
+
+.ImLinkedin {
+  color: rgb(87, 87, 87);
+}
+
+.ImLinkedin:hover {
+  color: rgb(53, 119, 240);
+}
+.steamCardContainer {
+  background-size: 32px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(87, 87, 87);
+  border-radius: 50%;
+}
+.ImSteam {
+  color: white;
+}
+
+.steamCardContainer:hover {
+  background: rgb(0, 15, 69);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 15, 69, 1) 0%,
+    rgba(0, 27, 87, 1) 25%,
+    rgba(11, 41, 98, 1) 43%,
+    rgba(53, 123, 226, 1) 99%
+  );
+}
+
+#card {
+  -webkit-box-shadow: 0px 0px 47px -4px rgba(148, 148, 148, 1);
+  -moz-box-shadow: 0px 0px 47px -4px rgba(148, 148, 148, 1);
+  box-shadow: 0px 0px 47px -4px rgba(148, 148, 148, 1);
+}

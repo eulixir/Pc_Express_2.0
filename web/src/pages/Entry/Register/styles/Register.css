@@ -4,14 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    180deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background-image: url('../../../../assets/wallpeaper.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .registerBackground p {
@@ -19,6 +14,9 @@
   position: absolute;
   top: 100px;
   color: white;
+}
+.contactFormContainerOne {
+  font: 700 1.6rem Roboto;
 }
 
 .registerInputs {
@@ -91,11 +89,6 @@
 @media (min-width: 600px) {
   .registerLinks {
     width: 80vw;
-  }
-  .registerInputs input[type='password'],
-  .registerInputs input[type='email'],
-  .registerInputs input[type='submit'] {
-    width: 60vw;
   }
 }
 

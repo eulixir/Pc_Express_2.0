@@ -1,0 +1,12 @@
+.landingSliderContainer {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  background-color: rgba(250, 235, 215, 0);
+}
+
+.landingSlider {
+  width: 80%;
+}

@@ -1,0 +1,71 @@
+.helpToAssemblyContainer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.helpToAssemblyIconsContainer {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.iconsAssemblyContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.BsController {
+  font: 400 1.4rem Permanent Marker, cursive;
+  color: rgb(255, 255, 255);
+  transition: 0.4s;
+  cursor: pointer;
+  color: rgb(44, 158, 9);
+}
+.BsController:hover {
+  color: rgb(76, 233, 29);
+  transform: translateY(-5px);
+}
+
+.RiHome2Line {
+  cursor: pointer;
+  transition: 0.4s;
+  font: 400 1.4rem Permanent Marker, cursive;
+  color: rgb(204, 207, 21);
+}
+.RiHome2Line:hover {
+  color: rgb(246, 250, 7);
+  transform: translateY(-5px);
+}
+.BsGear {
+  cursor: pointer;
+  transition: 0.4s;
+  font: 400 1.4rem Permanent Marker, cursive;
+  color: rgb(204, 21, 195);
+}
+.BsGear:hover {
+  color: rgb(247, 11, 235);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 750px) {
+  .helpToAssemblyContainer {
+    flex-direction: column;
+  }
+  .BsController {
+    font: 400 1rem Permanent Marker, cursive;
+  }
+
+  .RiHome2Line {
+    font: 700 1rem 'Shadows Into Light', cursive;
+  }
+  .BsGear {
+    font: 700 1rem 'Roboto';
+  }
+}

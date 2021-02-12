@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Lato&family=Montserrat&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
 
+:root {
+  --default-blue: #294cca;
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,4 +15,29 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+}
+
+.backgroundSmooth {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.884);
+}
+
+body {
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  border: 2px solid var(--default-blue);
+  display: flex;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--default-blue);
+  width: 20px;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(41, 41, 41);
 }

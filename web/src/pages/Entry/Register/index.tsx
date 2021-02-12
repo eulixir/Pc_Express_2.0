@@ -26,12 +26,11 @@ function Register() {
         })
 
         .then(() => {
-          alert('cadastro realizado com sucesso');
-
+          alert('Cadastro realizado com sucesso');
           history.push('/Entry/Login');
         })
         .catch(() => {
-          ('Erro no cadastro!');
+          alert('Email já registrado');
         });
     } else {
       alert('As senhas não coincidem');
@@ -41,49 +40,51 @@ function Register() {
   return (
     <div className="background">
       <div className="registerBackground">
-        <div className="entryContainer">
-          <div className="GoBackEntryIcon">
-            <Link to="/Entry/Login">
-              <BsArrowLeft color="white" size={50} />
-            </Link>
+        <div className="backgroundEntrySmooth">
+          <div className="entryContainer">
+            <div className="GoBackEntryIcon">
+              <Link to="/Entry/Login">
+                <BsArrowLeft color="white" size={50} />
+              </Link>
+            </div>
+
+            <p>Register</p>
+            <form onSubmit={handleCreateRegister} className="registerInputs">
+              <input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => [setName(e.target.value)]}
+                required
+              />
+
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => [setEmail(e.target.value)]}
+                required
+              />
+
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => [setPassword(e.target.value)]}
+                required
+              />
+
+              <input
+                type="password"
+                placeholder="Repeat your Password"
+                value={repeatPassword}
+                onChange={(e) => [setRepeatPassword(e.target.value)]}
+                required
+              />
+
+              <input type="submit" value="REGISTER" />
+            </form>
           </div>
-
-          <p>Register</p>
-          <form onSubmit={handleCreateRegister} className="registerInputs">
-            <input
-              type="text"
-              placeholder="Name"
-              value={name}
-              onChange={(e) => [setName(e.target.value)]}
-              required
-            />
-
-            <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => [setEmail(e.target.value)]}
-              required
-            />
-
-            <input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => [setPassword(e.target.value)]}
-              required
-            />
-
-            <input
-              type="password"
-              placeholder="Repeat your Password"
-              value={repeatPassword}
-              onChange={(e) => [setRepeatPassword(e.target.value)]}
-              required
-            />
-
-            <input type="submit" value="REGISTER" />
-          </form>
         </div>
       </div>
     </div>

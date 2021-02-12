@@ -4,20 +4,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    180deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background-image: url('../../../../assets/wallpeaper.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .loginBackground p {
-  font: 700 2rem Roboto;
+  font: 700 1.2rem Roboto;
   position: absolute;
   top: 100px;
+  color: white;
+}
+.loginBackground h5 {
+  font: 400 1rem 'Roboto';
+  position: absolute;
+  top: 140px;
   color: white;
 }
 
@@ -40,6 +41,7 @@
   position: relative;
 }
 .loginInputs input[type='password'],
+.loginInputs input[type='text'],
 .loginInputs input[type='email'] {
   width: 80vw;
   height: 45px;
@@ -51,12 +53,13 @@
   border-right: none;
   outline: none;
   font: 700 1rem Roboto;
-  color: white;
+  color: rgb(233, 233, 233);
   padding-left: 20px;
   transition: 0.8s;
 }
 
 .loginInputs input[type='password']:focus,
+.loginInputs input[type='text']:focus,
 .loginInputs input[type='email']:focus {
   border: 2px solid white;
   border-top: none;
@@ -65,13 +68,15 @@
 }
 
 .loginInputs input[type='password']::placeholder,
-.loginInputs input[type='email']::placeholder {
+.loginInputs input[type='email']::placeholder,
+.loginInputs input[type='text']::placeholder {
   color: white;
   transition: 0.8s;
 }
 
 .loginInputs input[type='password']:focus::placeholder,
-.loginInputs input[type='email']:focus::placeholder {
+.loginInputs input[type='email']:focus::placeholder,
+.loginInputs input[type='text']:focus::placeholder {
   opacity: 40%;
 }
 
@@ -122,6 +127,7 @@
   }
   .loginInputs input[type='password'],
   .loginInputs input[type='email'],
+  .loginInputs input[type='text'],
   .loginInputs input[type='submit'] {
     width: 60vw;
   }
@@ -133,6 +139,7 @@
   }
   .loginInputs input[type='password'],
   .loginInputs input[type='email'],
+  .loginInputs input[type='text'],
   .loginInputs input[type='submit'] {
     width: 40vw;
   }
@@ -144,7 +151,13 @@
   }
   .loginInputs input[type='password'],
   .loginInputs input[type='email'],
+  .loginInputs input[type='text'],
   .loginInputs input[type='submit'] {
     width: 40vw;
+  }
+}
+@media (max-height: 700px) {
+  .loginLinks {
+    margin-bottom: 40px;
   }
 }

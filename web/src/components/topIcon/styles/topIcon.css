@@ -1,0 +1,27 @@
+.goTopContainer {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0);
+  right: 50px;
+  bottom: 30px;
+  border-radius: 50%;
+  color: white;
+  border: 4px solid white;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.goTopContainer:hover {
+  opacity: 70%;
+}
+
+@media (max-width: 700px) {
+  .goTopContainer {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,296 @@
+.aboutUsBackground {
+  background-image: url('../../../assets/akaliSmooth.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-attachment: fixed;
+}
+.aboutUsSmooth {
+  width: 100vw;
+  height: 100vh;
+}
+.aboutUsHeader {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font: 700 1.6rem 'Roboto';
+  align-items: center;
+  background-attachment: fixed;
+}
+
+.aboutUsHeaderTextContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.abousUsContainer {
+  background-color: rgb(255, 255, 255);
+
+  width: 100vw;
+}
+.aboutUsHeaderTextContainer h5,
+.aboutUsHeaderTextContainer h2 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.aboutUsLink {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  text-decoration: none;
+  font: 700 1.2rem 'Roboto';
+  width: 250px;
+  height: 70px;
+  display: flex;
+  margin-top: 40px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  transition: 0.8s;
+  margin-bottom: 100px;
+}
+.aboutUsLink:hover {
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid white;
+  background-color: rgba(197, 197, 197, 0);
+}
+
+.mvvHeader {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 700 2rem Roboto;
+  background-color: rgb(255, 255, 255);
+  color: rgb(51, 51, 51);
+  text-align: center;
+  border: 5px solid var(--border-color);
+}
+.mvvItensContainer {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: var(--default-blue);
+}
+
+.mvvItens {
+  width: 300px;
+  height: 200px;
+  border: 2px solid rgba(187, 187, 187, 0);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.mvvItens:hover {
+  border: 3px solid white;
+}
+.mvvItens h5 {
+  color: rgb(255, 255, 255);
+  font: 700 1.2rem Roboto;
+  text-align: justify;
+}
+.mvvItens span {
+  color: rgb(226, 226, 226);
+}
+
+.creationContainer {
+  width: 100vw;
+  height: 80vh;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.creationTextContainer {
+  color: var(--default-blue);
+  width: 80%;
+  height: 80%;
+  -webkit-box-shadow: 0px 0px 47px -4px rgba(148, 148, 148, 1);
+  -moz-box-shadow: 0px 0px 47px -4px rgba(148, 148, 148, 1);
+  box-shadow: 0px 0px 47px -4px rgba(148, 148, 148, 1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  background-color: white;
+}
+.creationTextContainer a {
+  color: var(--default-blue);
+  font: 700 1rem Roboto;
+  text-decoration: none;
+}
+.creationTextContainer a:hover {
+  color: rgb(0, 204, 255);
+}
+
+.creationTextContainer h5 {
+  margin-top: 50px;
+  font: 700 1.8rem Roboto;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.creationTextContainer span {
+  color: rgb(20, 20, 20);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.dreamAboutUsContainer {
+  width: 100vw;
+  height: 70vh;
+  background-color: var(--default-blue);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dreamAboutUsContainerOne {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dreamAboutUsContainerOne img {
+  width: 500px;
+  height: 500px;
+}
+.dreamAboutUsContainerTwo {
+  background-color: #1d3ba8;
+  color: white;
+  border-left: 4px solid white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dreamAboutUsContainerTwo p {
+  color: white;
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: center;
+  font: 500 1.4rem Roboto;
+}
+
+.employeesContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.aboutUsMemberText {
+  font: 700 2rem Roboto;
+  color: var(--default-blue);
+  font-variant-ligatures: common-ligatures;
+}
+
+@media (max-width: 1000px) {
+  .mvvItensContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vw;
+  }
+  .mvvHeader {
+    font: 700 2rem Roboto;
+  }
+}
+@media (max-width: 1400px) {
+  .aboutUsHeaderTextContainer {
+    width: 70%;
+  }
+  .dreamAboutUsContainer {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .dreamAboutUsContainerTwo {
+    color: white;
+    border-top: 4px solid white;
+    border-left: none;
+    width: 90%;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media (max-width: 1200px) {
+  .dreamAboutUsContainer {
+    height: 150vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .mvvItensContainer {
+    height: 180vw;
+  }
+  .creationTextContainer span {
+    color: rgb(20, 20, 20);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 850px) {
+  .creationContainer {
+    height: 150vh;
+  }
+  .dreamAboutUsContainer {
+    height: 180vh;
+  }
+}
+@media (max-width: 580px) {
+  .creationContainer {
+    height: 200vh;
+  }
+  .dreamAboutUsContainerOne img {
+    width: 300px;
+    height: 300px;
+  }
+  .dreamAboutUsContainerOne {
+    width: 100%;
+    height: 20%;
+  }
+  .dreamAboutUsContainer {
+    height: 50vh;
+    width: 100%;
+  }
+  .dreamAboutUsContainer p {
+    margin: 0;
+  }
+}
+@media (max-width: 400px) {
+  .dreamAboutUsContainer {
+    margin-bottom: 150px;
+    height: 140vh;
+  }
+}

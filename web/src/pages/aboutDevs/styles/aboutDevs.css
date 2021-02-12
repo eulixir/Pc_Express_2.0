@@ -1,0 +1,63 @@
+.aboutDevsBackground {
+  background-image: url(../../../assets/horizonZeroSmooth.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-attachment: fixed;
+}
+.aboutDevsSmooth {
+  width: 100vw;
+  height: 100vh;
+}
+.aboutDevsHeader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font: 700 1.6rem 'Roboto';
+  align-items: center;
+  background-attachment: fixed;
+}
+.aboutDevsHeaderTextContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.aboutDevsHeaderTextContainer h5,
+.aboutDevsHeaderTextContainer h2 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.aboutDevsLink {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  text-decoration: none;
+  font: 700 1.2rem 'Roboto';
+  width: 250px;
+  height: 70px;
+  display: flex;
+  margin-top: 40px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  transition: 0.8s;
+  margin-bottom: 100px;
+}
+.aboutDevsLink:hover {
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid white;
+  background-color: rgba(197, 197, 197, 0);
+}

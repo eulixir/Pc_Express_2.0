@@ -9,6 +9,12 @@
   background-color: rgba(0, 0, 0, 0.349);
   border-radius: 15px;
   border: 2px solid white;
+  overflow-y: scroll;
+
+  overflow-x: hidden;
+}
+.entryContainer::-webkit-scrollbar {
+  width: 0px;
 }
 
 .entryContainer a {
@@ -18,11 +24,20 @@
   font: 400 0.8rem Roboto;
 }
 
+.backgroundEntrySmooth {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.884);
+}
+
 .GoBackEntryIcon {
   cursor: pointer;
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 20px;
+  left: 20px;
   transition: 0.8s;
 }
 .GoBackEntryIcon:hover {
